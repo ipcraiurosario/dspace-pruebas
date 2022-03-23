@@ -1,0 +1,1038 @@
+diff --git a/dspace/config/dspace.cfg b/dspace/config/dspace.cfg
+index d17993d4d..6f548a6d0 100644
+--- a/dspace/config/dspace.cfg
++++ b/dspace/config/dspace.cfg
+@@ -2171,3 +2172,4 @@ include = ${module_dir}/translator.cfg
+ include = ${module_dir}/mapMetadata-CITA.cfg
+ include = ${module_dir}/mapTypes-CITA.cfg
+ include = ${module_dir}/citas-APA.cfg
++include = ${module_dir}/oapiwik.cfg
+\ No newline at end of file
+diff --git a/dspace/config/launcher.xml b/dspace/config/launcher.xml
+index bf2c22618..c218eb142 100644
+--- a/dspace/config/launcher.xml
++++ b/dspace/config/launcher.xml
+@@ -373,4 +373,28 @@
+             <class>org.dspace.app.util.Version</class>
+         </step>
+     </command>
++    <command>
++        <name>resend-to-matomo</name>
++        <description>Create Matomo DB for Missing Usage Events</description>
++        <arguments>-create</arguments>
++        <step>
++            <class>com.openaire.piwik.tracker.OpenAirePiwikTrackerUnreportedDB</class>
++        </step>
++    </command>
++    <command>
++        <name>resend-to-matomo</name>
++        <description>Retry sending all Missing Usage Events to Matomo</description>
++        <arguments>-retry</arguments>
++        <step>
++            <class>com.openaire.piwik.tracker.OpenAirePiwikTrackerUnreportedDB</class>
++        </step>
++    </command>
++    <command>
++        <name>resend-to-matomo</name>
++        <description>Delete Usage Events Sent to Matomo</description>
++        <arguments>-delete</arguments>
++        <step>
++            <class>com.openaire.piwik.tracker.OpenAirePiwikTrackerUnreportedDB</class>
++        </step>
++    </command>
+ </commands>
+diff --git a/dspace/config/modules/oapiwik.cfg b/dspace/config/modules/oapiwik.cfg
+new file mode 100755
+index 000000000..db5866182
+--- /dev/null
++++ b/dspace/config/modules/oapiwik.cfg
+@@ -0,0 +1,26 @@
++
++
++#------------------------#
++# OpenAIRE Piwik Tracker #
++#------------------------#
++
++#Base Tracker URL
++oapiwik.piwik.trackerURL = https://analytics.openaire.eu/piwik.php
++
++#Piwik siteID
++oapiwik.piwik.siteID = 1
++
++#Piwik Authentication Token
++oapiwik.piwik.tokenAuth=32846584f571be9b57488bf4088f30ea
++
++#IP Address Anonymization Bytes. Values in {1,2,3}
++#oapiwik.piwik.ipanonymizationbytes=2
++
++# Flag to enable/disable tracking. Default is true
++oapiwik.piwik.enabled = true
++
++# Flag whether failed reports of views should be stored in a database to resend them later
++oapiwik.piwik.retry = true
++
++# Location of the SQLite DB on the file system is [dspace]/oapiwik.piwik.matomoDbLocation
++oapiwik.piwik.matomoDbLocation = var/Matomo.db
+\ No newline at end of file
+diff --git a/dspace/config/spring/jspui/openaire-piwik-xmlui.xml b/dspace/config/spring/jspui/openaire-piwik-xmlui.xml
+new file mode 100755
+index 000000000..d2c2e7ee6
+--- /dev/null
++++ b/dspace/config/spring/jspui/openaire-piwik-xmlui.xml
+@@ -0,0 +1,12 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<beans
++    xmlns="http://www.springframework.org/schema/beans"
++    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++    xmlns:util="http://www.springframework.org/schema/util"
++    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
++                           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.0.xsd">
++
++    <bean id="piwikOpenAire" class="com.openaire.piwik.tracker.OpenAirePiwikTracker" lazy-init="true">
++    </bean>
++
++</beans>
+diff --git a/dspace/config/spring/xmlui/openaire-piwik-xmlui.xml b/dspace/config/spring/xmlui/openaire-piwik-xmlui.xml
+new file mode 100755
+index 000000000..d2c2e7ee6
+--- /dev/null
++++ b/dspace/config/spring/xmlui/openaire-piwik-xmlui.xml
+@@ -0,0 +1,12 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<beans
++    xmlns="http://www.springframework.org/schema/beans"
++    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++    xmlns:util="http://www.springframework.org/schema/util"
++    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
++                           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.0.xsd">
++
++    <bean id="piwikOpenAire" class="com.openaire.piwik.tracker.OpenAirePiwikTracker" lazy-init="true">
++    </bean>
++
++</beans>
+diff --git a/dspace/modules/jspui/pom.xml b/dspace/modules/jspui/pom.xml
+index d736fee78..3cdc9ba52 100644
+--- a/dspace/modules/jspui/pom.xml
++++ b/dspace/modules/jspui/pom.xml
+@@ -103,6 +103,14 @@
+ 
+     <dependencies>
+ 
++       <!-- OpenAire Piwik Tracker  -->
++        <dependency>
++            <groupId>com.openaire</groupId>
++            <artifactId>openaire-piwik-api</artifactId>
++            <version>1.0.0</version>
++            <type>jar</type>
++        </dependency>
++
+         <dependency>
+             <groupId>org.dspace.modules</groupId>
+             <artifactId>additions</artifactId>
+diff --git a/dspace/modules/openaire-piwik/openaire-piwik-api/pom.xml b/dspace/modules/openaire-piwik/openaire-piwik-api/pom.xml
+new file mode 100755
+index 000000000..b17ab592c
+--- /dev/null
++++ b/dspace/modules/openaire-piwik/openaire-piwik-api/pom.xml
+@@ -0,0 +1,46 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project xmlns="http://maven.apache.org/POM/4.0.0"
++         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
++    <modelVersion>4.0.0</modelVersion>
++
++    <parent>
++        <groupId>com.openaire</groupId>
++        <artifactId>openaire-piwik</artifactId>
++        <version>1.0.0</version>
++    </parent>
++
++    <groupId>com.openaire</groupId>
++    <artifactId>openaire-piwik-api</artifactId>
++    <version>1.0.0</version>
++    <packaging>jar</packaging>
++    <name>OpenAIRE Piwik Tracker API</name>
++    <url>openaire.eu</url>
++
++    <dependencies>
++        <dependency>
++            <groupId>org.dspace</groupId>
++            <artifactId>dspace-api</artifactId>
++
++        </dependency>
++
++        <dependency>
++            <groupId>javax.servlet</groupId>
++            <artifactId>servlet-api</artifactId>
++            <version>2.3</version>
++            <scope>provided</scope>
++        </dependency>
++        
++		<dependency>
++		    <groupId>org.apache.httpcomponents</groupId>
++		    <artifactId>httpasyncclient</artifactId>
++		    <version>4.1.3</version>
++		</dependency>
++        <!-- https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc -->
++        <dependency>
++            <groupId>org.xerial</groupId>
++            <artifactId>sqlite-jdbc</artifactId>
++            <version>3.21.0.1</version>
++        </dependency>
++    </dependencies>
++</project>
+diff --git a/dspace/modules/openaire-piwik/openaire-piwik-api/src/main/java/com/openaire/piwik/tracker/AbstractUsageEventListener.java b/dspace/modules/openaire-piwik/openaire-piwik-api/src/main/java/com/openaire/piwik/tracker/AbstractUsageEventListener.java
+new file mode 100755
+index 000000000..c6a6db7bb
+--- /dev/null
++++ b/dspace/modules/openaire-piwik/openaire-piwik-api/src/main/java/com/openaire/piwik/tracker/AbstractUsageEventListener.java
+@@ -0,0 +1,70 @@
++/**
++ * The contents of this file are subject to the license and copyright
++ * detailed in the LICENSE and NOTICE files at the root of the source
++ * tree and available online at
++ *
++ * http://www.dspace.org/license/
++ */
++package com.openaire.piwik.tracker;
++
++import org.dspace.services.EventService;
++import org.dspace.services.model.EventListener;
++import org.springframework.beans.BeansException;
++import org.springframework.beans.factory.config.BeanPostProcessor;
++
++/**
++ * AbstractUsageEventListener is used as the base class for listening events running
++ * in the EventService.
++ *
++ * @author Mark Diggory (mdiggory at atmire.com)
++ * @version $Revision: $
++ */
++public abstract class AbstractUsageEventListener implements EventListener, BeanPostProcessor {
++
++	public AbstractUsageEventListener() {
++		super();
++	}
++
++    @Override
++    public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
++        return bean;
++    }
++
++    @Override
++    public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
++        if(beanName.equals("org.dspace.services.EventService"))
++        {
++            setEventService((EventService) bean);
++        }
++        return bean;
++	}
++
++	/**
++	 * Empty String[] flags to have Listener
++	 * consume any event name prefixes.
++	 */
++	public String[] getEventNamePrefixes() {
++		return new String[0];
++	}
++
++	/**
++	 * Currently consumes events generated for
++	 * all resources.
++	 */
++	public String getResourcePrefix() {
++		return null;
++	}
++
++	public void setEventService(EventService service) {
++		if(service != null)
++        {
++            service.registerEventListener(this);
++        }
++		else
++        {
++            throw new IllegalStateException("EventService handed to Listener cannot be null");
++        }
++
++	}
++
++}
+diff --git a/dspace/modules/openaire-piwik/openaire-piwik-api/src/main/java/com/openaire/piwik/tracker/OpenAirePiwikTracker.java b/dspace/modules/openaire-piwik/openaire-piwik-api/src/main/java/com/openaire/piwik/tracker/OpenAirePiwikTracker.java
+new file mode 100755
+index 000000000..ae47e448b
+--- /dev/null
++++ b/dspace/modules/openaire-piwik/openaire-piwik-api/src/main/java/com/openaire/piwik/tracker/OpenAirePiwikTracker.java
+@@ -0,0 +1,438 @@
++/*
++ * OpenAirePiwikTracker.java
++ *
++ * Version: 0.2
++ * Date: 2018-05-20
++ * Initial version @mire.  All rights reserved.
++ *
++ * Redistribution and use in source and binary forms, with or without
++ * modification, are permitted provided that the following conditions are
++ * met:
++ * - Redistributions of source code must retain the above copyright
++ * notice, this list of conditions and the following disclaimer.
++ * - Redistributions in binary form must reproduce the above copyright
++ * notice, this list of conditions and the following disclaimer in the
++ * documentation and/or other materials provided with the distribution.
++ *
++ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
++ * ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
++ * LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
++ * A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
++ * HOLDERS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
++ * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
++ * BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS
++ * OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
++ * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
++ * TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
++ * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
++ * DAMAGE.
++ */
++package com.openaire.piwik.tracker;
++
++import java.io.IOException;
++import java.net.Inet6Address;
++import java.net.InetAddress;
++import java.net.URI;
++import java.net.URISyntaxException;
++import java.net.UnknownHostException;
++import java.util.HashMap;
++import java.util.Locale;
++import java.util.Map;
++
++import javax.servlet.http.HttpServletRequest;
++
++import org.apache.commons.lang.StringUtils;
++import org.apache.http.HttpResponse;
++import org.apache.http.HttpStatus;
++import org.apache.http.client.config.RequestConfig;
++import org.apache.http.client.methods.HttpGet;
++import org.apache.http.client.utils.URIBuilder;
++import org.apache.http.concurrent.FutureCallback;
++import org.apache.http.impl.nio.client.CloseableHttpAsyncClient;
++import org.apache.http.impl.nio.client.HttpAsyncClients;
++import org.apache.http.impl.nio.conn.PoolingNHttpClientConnectionManager;
++import org.apache.http.impl.nio.reactor.DefaultConnectingIOReactor;
++import org.apache.log4j.Logger;
++import org.dspace.content.Bitstream;
++import org.dspace.content.Bundle;
++import org.dspace.content.Item;
++import org.dspace.core.Constants;
++import org.dspace.services.factory.DSpaceServicesFactory;
++import org.dspace.services.model.Event;
++import org.dspace.usage.UsageEvent;
++
++import com.google.gson.Gson;
++
++/**
++ * User: dpie (dpierrakos at gmail.com) Date: Time:
++ */
++public class OpenAirePiwikTracker extends AbstractUsageEventListener
++{
++    /* Log4j logger */
++    private static Logger log = Logger.getLogger(OpenAirePiwikTracker.class);
++
++    // Base URl of the Piwik platform
++    private String piwikbaseUrl;
++
++    // Piwik Site ID
++    private String piwikSiteID;
++
++    // Piwik IP Anonumization Bytes
++    private int piwikIPAnonymizationBytes;
++
++    // Piwik Site Authentication Token
++    private String piwikTokenAuth;
++
++    // Flag if Piwik is enabled for current installation. Might be disabled for
++    // test instances e.g..
++    private boolean piwikEnabled;
++
++    // Flag if mising requests are stored in local DB for retry
++    private boolean piwikRetry;
++
++    // Flag if a proxy is in front of the DSpace instance
++    private boolean useProxies;
++
++    // The URL of this DSpace instance
++    private String dspaceURL;
++
++    // The host name of this DSpace instance
++    private String dspaceHostName;
++
++    // Async http client to prevent waiting for piwik server
++    private CloseableHttpAsyncClient httpClient;
++
++    // Pooling connection manager for httpClient
++    private PoolingNHttpClientConnectionManager connectionManager;
++
++    // The time out for a single connection if piwik is slow or unreachable.
++    private static final int CONNECTION_TIMEOUT = 5 * 1000;
++
++    // The number of connections per route
++    private static final int NUMBER_OF_CONNECTIONS_PER_ROUTE = 100;
++
++    // If there are more than MAX_NUMBER_OF_PENDING_CONNECTIONS waiting to be
++    // served events wont be send to Piwik
++    private static final int MAX_NUMBER_OF_PENDING_CONNECTIONS = 10;
++
++    /**
++     * Constructor to initialize the HTTP Client. We only need one per instance
++     * as it is able to handle multiple requests by multiple Threads at once.
++     * 
++     */
++    public OpenAirePiwikTracker()
++    {
++
++        // init the httpClient with custom number of connections and timeout
++        try
++        {
++            RequestConfig requestConfig = RequestConfig.custom()
++                    .setConnectTimeout(CONNECTION_TIMEOUT)
++                    .setSocketTimeout(CONNECTION_TIMEOUT).build();
++            DefaultConnectingIOReactor ioreactor;
++            ioreactor = new DefaultConnectingIOReactor();
++            connectionManager = new PoolingNHttpClientConnectionManager(
++                    ioreactor);
++            connectionManager
++                    .setDefaultMaxPerRoute(NUMBER_OF_CONNECTIONS_PER_ROUTE);
++            httpClient = HttpAsyncClients.custom()
++                    .setDefaultRequestConfig(requestConfig)
++                    .setConnectionManager(connectionManager).build();
++
++            httpClient.start();
++        }
++        catch (Exception e)
++        {
++            log.error(
++                    "Piwik Tracker couldn't be initialized. There will be no tracking until server restart.",
++                    e);
++            httpClient = null;
++        }
++    }
++
++    /**
++     * Read the Piwik configuration options
++     */
++    private void readConfiguration()
++    {
++        // Piwik variables
++        piwikbaseUrl = DSpaceServicesFactory.getInstance()
++                .getConfigurationService()
++                .getProperty("oapiwik.piwik.trackerURL");
++        piwikSiteID = DSpaceServicesFactory.getInstance()
++                .getConfigurationService().getProperty("oapiwik.piwik.siteID");
++        piwikTokenAuth = DSpaceServicesFactory.getInstance()
++                .getConfigurationService()
++                .getProperty("oapiwik.piwik.tokenAuth");
++        piwikEnabled = DSpaceServicesFactory.getInstance()
++                .getConfigurationService()
++                .getPropertyAsType("oapiwik.piwik.enabled", true);
++        piwikIPAnonymizationBytes = DSpaceServicesFactory.getInstance()
++                .getConfigurationService()
++                .getPropertyAsType("oapiwik.piwik.ipanonymizationbytes", 0);
++        piwikRetry = DSpaceServicesFactory.getInstance()
++                .getConfigurationService()
++                .getPropertyAsType("oapiwik.piwik.retry", true);
++
++        // DSpace variables
++        useProxies = DSpaceServicesFactory.getInstance()
++                .getConfigurationService()
++                .getPropertyAsType("useProxies", false);
++        dspaceURL = DSpaceServicesFactory.getInstance()
++                .getConfigurationService().getProperty("dspace.url");
++        dspaceHostName = DSpaceServicesFactory.getInstance()
++                .getConfigurationService().getProperty("dspace.hostname");
++
++    }
++
++    @Override
++    public void receiveEvent(final Event event)
++    {
++
++        if (!(event instanceof UsageEvent))
++        {
++            return;
++        }
++
++        try
++        {
++            this.readConfiguration();
++            if (!piwikEnabled || httpClient == null)
++            {
++                return;
++            }
++            if (connectionManager.getTotalStats()
++                    .getPending() >= MAX_NUMBER_OF_PENDING_CONNECTIONS)
++            {
++                log.error(
++                        "Event could not be sent to Piwik server due to insufficient available connections");
++                return;
++            }
++
++            log.debug("Usage event received " + event.getName());
++
++            UsageEvent ue = (UsageEvent) event;
++            if (ue.getAction() == UsageEvent.Action.VIEW)
++            {
++                // Item Download Case
++                if (ue.getObject().getType() == Constants.BITSTREAM)
++                {
++                    Bitstream bitstream = (Bitstream) ue.getObject();
++                    if (bitstream.getBundles().size() > 0)
++                    {
++                        Bundle bundle = bitstream.getBundles().get(0);
++                        if (bundle.getItems().size() > 0)
++                        {
++                            Item item = bundle.getItems().get(0);
++                            this.logEvent(item, bitstream, ue.getRequest());
++                        }
++                    }
++                }
++                // Item View Case
++                if (ue.getObject().getType() == Constants.ITEM)
++                {
++                    Item item = (Item) ue.getObject();
++                    this.logEvent(item, null, ue.getRequest());
++                }
++            }
++
++        }
++        catch (Exception e)
++        {
++            log.error(e.getMessage());
++        }
++    }
++
++    /**
++     * Builds the URI to send the event to the configured Piwik instance and
++     * sends the request.
++     */
++    private void logEvent(final Item item, final Bitstream bitstream,
++            final HttpServletRequest request)
++            throws IOException, URISyntaxException
++    {
++        URIBuilder builder = new URIBuilder();
++        builder.setPath(piwikbaseUrl);
++        builder.addParameter("idsite", piwikSiteID);
++        builder.addParameter("cip", this.getIPAddress(request));
++        builder.addParameter("rec", "1");
++        builder.addParameter("token_auth", piwikTokenAuth);
++        builder.addParameter("action_name", item.getName());
++
++        // Agent Information
++        String agent = StringUtils
++                .defaultIfBlank(request.getHeader("USER-AGENT"), "");
++        builder.addParameter("ua", agent);
++
++        // Referer Information
++        String urlref = StringUtils.defaultIfBlank(request.getHeader("referer"),
++                "");
++        builder.addParameter("urlref", urlref);
++
++        // Country information in case of IPAnonymization
++        if (piwikIPAnonymizationBytes > 0 && piwikIPAnonymizationBytes < 4)
++        {
++            String country = "";
++            try
++            {
++                Locale locale = request.getLocale();
++                country = locale.getCountry();
++            }
++            catch (Exception e)
++            {
++                log.error("Cannot get locale", e);
++            }
++            builder.addParameter("country", country);
++        }
++
++        if (bitstream != null)
++        {
++            // Bitstream information in case of download event
++            StringBuffer sb = new StringBuffer(dspaceURL);
++            sb.append("/bitstream/handle/").append(item.getHandle())
++                    .append("/");
++            sb.append(bitstream.getName());
++            builder.addParameter("url", sb.toString());
++            builder.addParameter("download", sb.toString());
++
++        }
++        else
++        {
++            // Item information in case of Item view event
++            builder.addParameter("url",
++                    dspaceURL + "/handle/" + item.getHandle());
++        }
++
++        // Piwik Custom Variable for OAI-PMH ID tracking
++        Gson gson = new Gson();
++        Map<String, String[]> jsonPiwikCustomVars = new HashMap<>();
++        String[] oaipmhID = new String[] { "oaipmhID",
++                "oai:" + dspaceHostName + ":" + item.getHandle() };
++        jsonPiwikCustomVars.put("1", oaipmhID);
++        builder.addParameter("cvar", gson.toJson(jsonPiwikCustomVars));
++
++        this.sendRequest(builder.build());
++    }
++
++    /**
++     * Get the IP-Address from the given request. Handles cases where a Proxy is
++     * involved and IP-Address anonymization. Not yet working with IPv6
++     * 
++     * @param request
++     * @return
++     * @throws UnknownHostException
++     */
++    private String getIPAddress(final HttpServletRequest request)
++            throws UnknownHostException
++    {
++        String clientIP = request.getRemoteAddr();
++        if (useProxies && request.getHeader("X-Forwarded-For") != null)
++        {
++            /* This header is a comma delimited list */
++            for (String xfip : request.getHeader("X-Forwarded-For").split(","))
++            {
++                /*
++                 * proxy itself will sometime populate this header with the same
++                 * value in remote address. ordering in spec is vague, we'll
++                 * just take the last not equal to the proxy
++                 */
++                if (!request.getHeader("X-Forwarded-For").contains(clientIP))
++                {
++                    clientIP = xfip.trim();
++                }
++            }
++        }
++
++        // IP anonymization case
++
++        if (piwikIPAnonymizationBytes > 0 && piwikIPAnonymizationBytes < 4)
++        {
++
++            // Check IPv4 or IPv6
++            InetAddress ipadress = InetAddress.getByName(clientIP);
++            if (ipadress instanceof Inet6Address)
++            {
++                clientIP = "0.0.0.0";
++            }
++            else
++            {
++                switch (piwikIPAnonymizationBytes)
++                {
++                case 1:
++                    clientIP = clientIP.substring(0,
++                            StringUtils.ordinalIndexOf(clientIP, ".", 3))
++                            + ".0";
++                    break;
++                case 2:
++                    clientIP = clientIP.substring(0,
++                            StringUtils.ordinalIndexOf(clientIP, ".", 2))
++                            + ".0.0";
++                    break;
++                case 3:
++                    clientIP = clientIP.substring(0,
++                            StringUtils.ordinalIndexOf(clientIP, ".", 1))
++                            + ".0.0.0";
++                    break;
++                default:
++                    throw new IllegalArgumentException(
++                            "Invalid IP bytes: " + piwikIPAnonymizationBytes);
++                }
++            }
++        }
++
++        return clientIP;
++    }
++
++    /**
++     * Send the request to the given URI asynchronous. Ignores the result except
++     * for a status code check.
++     */
++    private void sendRequest(final URI uri)
++    {
++        final HttpGet request = new HttpGet(uri);
++        httpClient.execute(request, new FutureCallback<HttpResponse>()
++        {
++            @Override
++            public void completed(final HttpResponse response)
++            {
++                if (response.getStatusLine()
++                        .getStatusCode() == HttpStatus.SC_OK)
++                {
++                    log.info("Sent usage event to piwik");
++                }
++                else
++                {
++                    log.error("Error sending reqeust to Piwik." + " -> "
++                            + response.getStatusLine());
++                }
++            }
++
++            @Override
++            public void failed(final Exception ex)
++            {
++                log.error("Error sending usage event to Piwik", ex);
++                try
++                {
++                    if (piwikRetry)
++                    {
++                        OpenAirePiwikTrackerUnreported unreportedReq = new OpenAirePiwikTrackerUnreported();
++                        unreportedReq.storeRequest(uri.toString());
++                        log.info("Missing request stored to local DB");
++                    }
++                }
++                catch (Exception e)
++                {
++                    log.error("Error storing unreported request");
++                }
++
++            }
++
++            @Override
++            public void cancelled()
++            {
++                log.info("Request cancelled");
++            }
++
++        });
++    }
++}
+diff --git a/dspace/modules/openaire-piwik/openaire-piwik-api/src/main/java/com/openaire/piwik/tracker/OpenAirePiwikTrackerUnreported.java b/dspace/modules/openaire-piwik/openaire-piwik-api/src/main/java/com/openaire/piwik/tracker/OpenAirePiwikTrackerUnreported.java
+new file mode 100755
+index 000000000..69ce2cba3
+--- /dev/null
++++ b/dspace/modules/openaire-piwik/openaire-piwik-api/src/main/java/com/openaire/piwik/tracker/OpenAirePiwikTrackerUnreported.java
+@@ -0,0 +1,86 @@
++/*
++ * OpenAirePiwikTrackerUnreported.java
++ *
++ * Version: 0.1
++ * Date: 2018-05-20
++ *
++ * Redistribution and use in source and binary forms, with or without
++ * modification, are permitted provided that the following conditions are
++ * met:
++ * - Redistributions of source code must retain the above copyright
++ * notice, this list of conditions and the following disclaimer.
++ * - Redistributions in binary form must reproduce the above copyright
++ * notice, this list of conditions and the following disclaimer in the
++ * documentation and/or other materials provided with the distribution.
++ *
++ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
++ * ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
++ * LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
++ * A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
++ * HOLDERS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
++ * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
++ * BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS
++ * OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
++ * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
++ * TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
++ * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
++ * DAMAGE.
++ */
++package com.openaire.piwik.tracker;
++
++import java.sql.Connection;
++import java.sql.DriverManager;
++import java.sql.SQLException;
++import java.sql.Statement;
++import java.sql.Timestamp;
++import java.util.Calendar;
++
++import org.apache.log4j.Logger;
++
++/**
++ * User: dpie (dpierrakos at gmail.com) Date: Time:
++ */
++public class OpenAirePiwikTrackerUnreported
++{
++
++    private static Logger log = Logger
++            .getLogger(OpenAirePiwikTrackerUnreported.class);
++
++    public OpenAirePiwikTrackerUnreported()
++    {
++        try
++        {
++            // The JDBC driver loading doesn't work for webapps without this.
++            // http://tomcat.apache.org/tomcat-8.0-doc/jndi-datasource-examples-howto.html#DriverManager,_the_service_provider_mechanism_and_memory_leaks
++            Class.forName("org.sqlite.JDBC");
++        }
++        catch (ClassNotFoundException e)
++        {
++            log.error("Could not load sqlite JDBC driver");
++        }
++    }
++
++    public void storeRequest(String requestLost) throws Exception
++    {
++
++        try (Connection conn = DriverManager.getConnection(
++                OpenAirePiwikTrackerUnreportedDB.getMatomoDatabaseUrl());
++                Statement stmt = conn.createStatement();)
++        {
++
++            log.info("Connected to Matomo DB...");
++
++            Timestamp currentTimestamp = new java.sql.Timestamp(
++                    Calendar.getInstance().getTime().getTime());
++            String sqlInsertMissingRequestsToDB = "INSERT INTO MissingInformation (time_req,url,isSend) "
++                    + "VALUES ('" + currentTimestamp + "','" + requestLost
++                    + "',0);";
++
++            stmt.execute(sqlInsertMissingRequestsToDB);
++        }
++        catch (SQLException e)
++        {
++            log.error(e.getMessage());
++        }
++    }
++}
+\ No newline at end of file
+diff --git a/dspace/modules/openaire-piwik/openaire-piwik-api/src/main/java/com/openaire/piwik/tracker/OpenAirePiwikTrackerUnreportedDB.java b/dspace/modules/openaire-piwik/openaire-piwik-api/src/main/java/com/openaire/piwik/tracker/OpenAirePiwikTrackerUnreportedDB.java
+new file mode 100755
+index 000000000..e4cdb7db0
+--- /dev/null
++++ b/dspace/modules/openaire-piwik/openaire-piwik-api/src/main/java/com/openaire/piwik/tracker/OpenAirePiwikTrackerUnreportedDB.java
+@@ -0,0 +1,155 @@
++/*
++ * OpenAirePiwikTrackerUnreportedDB.java
++ *
++ * Version: 0.1
++ * Date: 2018-05-20
++ *
++ * Redistribution and use in source and binary forms, with or without
++ * modification, are permitted provided that the following conditions are
++ * met:
++ * - Redistributions of source code must retain the above copyright
++ * notice, this list of conditions and the following disclaimer.
++ * - Redistributions in binary form must reproduce the above copyright
++ * notice, this list of conditions and the following disclaimer in the
++ * documentation and/or other materials provided with the distribution.
++ *
++ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
++ * ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
++ * LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
++ * A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
++ * HOLDERS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
++ * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
++ * BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS
++ * OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
++ * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
++ * TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
++ * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
++ * DAMAGE.
++ */
++package com.openaire.piwik.tracker;
++
++import java.net.HttpURLConnection;
++import java.net.URL;
++import java.net.URLEncoder;
++import java.nio.charset.StandardCharsets;
++import java.sql.Connection;
++import java.sql.DriverManager;
++import java.sql.ResultSet;
++import java.sql.Statement;
++import java.util.HashMap;
++import java.util.Map;
++
++import org.dspace.services.factory.DSpaceServicesFactory;
++
++/**
++ * User: dpie (dpierrakos at gmail.com) Date: Time:
++**/
++public class OpenAirePiwikTrackerUnreportedDB
++{
++
++    public static String getMatomoDatabaseUrl()
++    {
++        String dspaceDir = DSpaceServicesFactory.getInstance()
++                .getConfigurationService().getProperty("dspace.dir");
++
++        String matomoDbLocation = DSpaceServicesFactory.getInstance()
++                .getConfigurationService()
++                .getProperty("oapiwik.piwik.matomoDbLocation");
++
++        String connectionStringMatomoDB = "jdbc:sqlite:" + dspaceDir + "/"
++                + matomoDbLocation;
++
++        return connectionStringMatomoDB;
++    }
++
++    public static void main(String[] args) throws Exception
++    {
++
++        String argument = args[0];
++        if (!("-create".equals(argument)) && !("-retry".equals(argument))
++                && !("-delete".equals(argument)))
++        {
++            System.out.println("Usage: dspace.dir/bin/dspace -create or -retry or -delete");
++            return;
++        }
++
++        try (Connection conn = DriverManager
++                .getConnection(getMatomoDatabaseUrl());
++                Statement stmt = conn.createStatement();)
++        {
++
++            System.out.println("Connected to Matomo DB...");
++            if (argument.equals("-create"))
++            {
++
++                String sqlCreate = "CREATE TABLE IF NOT EXISTS MissingInformation (time_req TEXT PRIMARY KEY, url TEXT NOT NULL, isSend INTEGER NOT NULL);";
++                stmt.executeUpdate(sqlCreate);
++            }
++            else if (argument.equals("-retry"))
++            {
++
++                try (ResultSet rs = stmt.executeQuery(
++                        "SELECT time_req, url FROM MissingInformation where isSend=0;");)
++                {
++                    String urlUnreported = "";
++                    String time_req = "";
++
++                    HashMap<String, String> timestampURLMap = new HashMap<String, String>();
++
++                    if (!rs.isBeforeFirst())
++                        System.out.println("No pending missing requests");
++
++                    else
++                    {
++                        while (rs.next())
++                        {
++                            time_req = rs.getString("time_req");
++                            urlUnreported = rs.getString("url");
++                            timestampURLMap.put(time_req, urlUnreported);
++                        }
++                    }
++
++                    for (Map.Entry<String, String> entry : timestampURLMap
++                            .entrySet())
++                    {
++                        String timeStamp = entry.getKey();
++                        String urlForReport = entry.getValue();
++
++                        URL obj = new URL(urlForReport + "&cdt="
++                                + URLEncoder.encode(timeStamp,
++                                        StandardCharsets.UTF_8.name()));
++                        HttpURLConnection con = (HttpURLConnection) obj
++                                .openConnection();
++                        int responseCode = con.getResponseCode();
++                        if (responseCode == 200)
++                        {
++                            String sqlUpdate = "";
++
++                            sqlUpdate = "UPDATE MissingInformation set isSend=1 where time_req='"
++                                    + timeStamp + "';";
++                            stmt.executeUpdate(sqlUpdate);
++                            System.out.println("Unreported Event sent");
++                        }
++                    }
++                }
++                catch (Exception e)
++                {
++                    System.out.println(e);
++                }
++            }
++            else if (argument.equals("-delete"))
++            {
++
++                String sqlPurge = "DELETE FROM MissingInformation where isSend=1;";
++                int deletedRowCount = stmt.executeUpdate(sqlPurge);
++                System.out.println(deletedRowCount
++                       +  " missing requests have already been sent to Matomo and deleted from local DB");
++
++            }
++        }
++        catch (Exception e)
++        {
++            System.out.println("Error in creating table " + e.getMessage());
++        }
++    }
++}
+\ No newline at end of file
+diff --git a/dspace/modules/openaire-piwik/pom.xml b/dspace/modules/openaire-piwik/pom.xml
+new file mode 100755
+index 000000000..5fe5f359e
+--- /dev/null
++++ b/dspace/modules/openaire-piwik/pom.xml
+@@ -0,0 +1,24 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project xmlns="http://maven.apache.org/POM/4.0.0"
++         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
++    <modelVersion>4.0.0</modelVersion>
++
++    <groupId>com.openaire</groupId>
++    <artifactId>openaire-piwik</artifactId>
++    <packaging>pom</packaging>
++    <url>openaire.eu</url>
++    <name>OpenAIRE Piwik tracker</name>
++    <version>1.0.0</version>
++
++    <parent>
++        <groupId>org.dspace</groupId>
++        <artifactId>modules</artifactId>
++        <version>[6.0,6.10]</version>
++    </parent>
++
++    <modules>
++        <module>openaire-piwik-api</module>
++    </modules>
++
++</project>
+diff --git a/dspace/modules/pom.xml b/dspace/modules/pom.xml
+index d4d329d7a..d5ea27e15 100644
+--- a/dspace/modules/pom.xml
++++ b/dspace/modules/pom.xml
+@@ -25,6 +25,7 @@
+          as a dependency in most other modules in [src]/dspace/modules -->
+     <modules>
+         <module>additions</module>
++        <module>openaire-piwik</module>        
+     </modules>
+ 
+     <!-- 
+diff --git a/dspace/modules/xmlui/pom.xml b/dspace/modules/xmlui/pom.xml
+index f8ad3532d..75fdebf33 100644
+--- a/dspace/modules/xmlui/pom.xml
++++ b/dspace/modules/xmlui/pom.xml
+@@ -228,6 +228,14 @@
+             </exclusions>
+         </dependency>
+ 
++       <!-- OpenAire Piwik Tracker  -->
++        <dependency>
++            <groupId>com.openaire</groupId>
++            <artifactId>openaire-piwik-api</artifactId>
++            <version>1.0.0</version>
++            <type>jar</type>
++        </dependency>
++
+         <!-- DSpace XMLUI Languages -->
+         <dependency>
+             <groupId>org.dspace</groupId>
+diff --git a/dspace/pom.xml b/dspace/pom.xml
+index 70c9f3348..67c49ee7e 100644
+--- a/dspace/pom.xml
++++ b/dspace/pom.xml
+@@ -168,7 +168,14 @@
+                 </exclusion>
+             </exclusions>
+     	</dependency>
++    <!-- Piwik OpenAIRE Tracker -->  
+         <dependency>
++            <groupId>com.openaire</groupId>
++            <artifactId>openaire-piwik-api</artifactId>
++            <version>1.0.0</version>
++        </dependency>       
++        <dependency>
++
+             <groupId>com.lyncode</groupId>
+             <artifactId>builder-commons</artifactId>
+             <version>1.0.2</version>

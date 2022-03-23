@@ -1,0 +1,204 @@
+.datacell {
+	text-align: center;
+	margin-left:10px;
+}
+
+#aspect_statistics_ExtendedStatisticsTransformer_div_stats {
+	width: 100%;
+}
+
+h3.ds-table-head {
+	margin-top: 15px !important;
+}
+
+#aspect_statistics_ExtendedStatisticsTransformer_div_stats table {
+	padding-top: 0px !important;
+}
+
+.graficoEstadistico {
+	border-top: 0px;
+	border-left: 0px;
+	padding: 0.4em 0em;
+	margin-top: 1em;
+	margin-right: 2.4em;
+	width: 652px;
+}
+
+.graficoEstadistico>div {
+	
+}
+
+.tabla-larga {
+	margin-right: 2.4em;
+	padding: 1em;
+	border: 1px solid #D3EEFF;
+	border-left: 0px;
+	border-top: 0px;
+	clear: none;
+	width: 598px;
+}
+
+.item-tabla-larga {
+	border-bottom: 1px solid #d3eeff;
+	clear: none;
+	height: 23px;
+	margin-bottom: 0.4em;
+	padding: 10px 0.4em 0.4em;
+	position: relative;
+	list-style: outside none none;
+	
+}
+
+.item-tabla-larga div {
+	clear: none;
+	display: table-cell;
+	padding-left: 20px;
+	position: relative;
+	width: 45em;
+	
+}
+
+#aspect_statistics_ExtendedStatisticsTransformer_field_time_filter,
+	#aspect_statistics_ExtendedStatisticsTransformer_field_num_items_filter
+	{
+	margin: 2em 0em;
+}
+
+#aspect_statistics_ExtendedStatisticsTransformer_div_stats > h2,
+.modoVisitas > h2, 
+.modoDescargas > h2, 
+#aspect_statistics_ExtendedStatisticsTransformer_div_stats h3{
+	margin-top: 2em;
+	padding-top: 0px;
+	border-bottom: 1px solid #d5d5d5;
+	color: #607890;
+	margin-bottom: 21px;
+	padding-bottom: 9px;
+	padding-left: 8px;
+	padding-top: 8px;
+	
+}
+
+#aspect_statistics_ExtendedStatisticsTransformer_div_stats {
+	padding-top: 0px !important;
+}
+
+.ds-table-header-cell even labelcell {
+	background-image: url('images/view.png');
+}
+
+#aspect_statistics_ExtendedStatisticsTransformer_div_statistics table {
+	padding-bottom: 10px;
+	width: 100%;
+}
+
+.graficoEstadistico {
+	width: 654px !important;
+}
+
+#seleccionModoVisitas {
+	background-image: url('images/back-blue.png');
+	padding: 7px;
+	border-radius: 5px;
+	margin-right: 10px;
+	color: #fff;
+	cursor:pointer; 
+	cursor: hand;
+}
+
+#seleccionModoDescargas {
+	background-image: url('images/back-blue.png');
+	padding: 7px;
+	border-radius: 5px;
+	margin-right: 10px;
+	color: #fff;
+	cursor:pointer; 
+	cursor: hand;
+}
+
+#aspect_statistics_ExtendedStatisticsTransformer_cell_ {
+	color: #607890;
+}
+
+#botones_estadisticas {
+	margin-bottom: 5%;
+}
+
+#aspect_statistics_CustomStatisticsTransformer_div_stats,#aspect_statistics_CustomPublicStatisticsTransformer_div_stats {
+	margin-right: 2em;
+	padding: 1em;
+	border: 1px solid #CCCCCC;
+	width: 655px;
+}
+
+#aspect_statistics_CustomStatisticsTransformer_div_stats table,#aspect_statistics_CustomPublicStatisticsTransformer_div_stats table  {
+	border: 1px solid #CCCCCC;
+	padding-top: 0px !important;
+}
+
+#aspect_statistics_CustomStatisticsTransformer_field_time_filter,
+	#aspect_statistics_CustomStatisticsTransformer_field_num_items_filter,
+	#aspect_statistics_CustomPublicStatisticsTransformer_field_time_filter,
+	#aspect_statistics_CustomPublicStatisticsTransformer_field_num_items_filter
+	{
+	margin: 2em 0em;
+}
+
+#aspect_statistics_CustomStatisticsTransformer_div_stats > h2,
+#aspect_statistics_CustomStatisticsTransformer_div_stats h3,
+#aspect_statistics_CustomPublicStatisticsTransformer_div_stats > h2,
+#aspect_statistics_CustomPublicStatisticsTransformer_div_stats h3{
+	margin-top: 2em;
+	padding-top: 0px;
+	border-bottom: 1px solid #d5d5d5;
+	color: #607890;
+	margin-bottom: 21px;
+	padding-bottom: 9px;
+	padding-left: 8px;
+	padding-top: 8px;
+	
+}
+
+#aspect_statistics_CustomStatisticsTransformer_div_stats,#aspect_statistics_CustomPublicStatisticsTransformer_div_stats {
+	padding-top: 0px !important;
+}
+
+#aspect_statistics_CustomStatisticsTransformer_div_statistics table,#aspect_statistics_CustomPublicStatisticsTransformer_div_statistics table {
+	border-color: #D3EEFF;
+	border-left: 0 none;
+	border-top: 0 none;
+	padding-bottom: 10px;
+	width: 655px;
+}
+
+#aspect_statistics_CustomStatisticsTransformer_cell_,#aspect_statistics_CustomPublicStatisticsTransformer_cell_ {
+	color: #607890;
+}
+#csvDownloadCustom{
+margin-left:34.5em;
+}
+
+.titleColumn{
+	color: #607890;
+	font-weight: bold;
+}
+#ImageCsv,#ImageCsv2{
+	height:33px;
+}
+#aspect_statistics_CustomPublicStatisticsTransformer_div_statistics .datacell{
+text-align:center !important;
+}
+
+#aspect_statistics_ExtendedStatisticsTransformer_div_statistics .first-page-header {
+    margin-left: 0px;
+}
+
+.ds-table-header-cell.even.labelcell {
+    text-align: center;
+}
+
+#aspect_statistics_ExtendedStatisticsTransformer_field_search-button {
+    color: #fff;
+    background-color: #607890;
+    border-bottom: 1px solid #607890;
+}

@@ -1,0 +1,16 @@
+# Email sent to DSpace users when they successfully batch import items via BTE.
+#
+# Parameters: {0} the filepath to the mapfile created by the batch import
+#          
+#
+# See org.dspace.core.Email for information on the format of this file.
+#
+Subject: Repositorio Institucional EdocUR Universidad del Rosario - La importación por lotes se completó correctamente.
+La importación por lotes que inició desde la interfaz de usuario del Repositorio se completó.
+
+Puede encontrar el mapa del archivo para la importación en la siguiente ruta: {0}
+
+
+Administrador Repositorio Institucional EdocUR
+
+

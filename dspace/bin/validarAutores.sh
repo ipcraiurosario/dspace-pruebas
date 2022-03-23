@@ -1,0 +1,12 @@
+./dspace curate -i 10336/3 -e prod-dspace@arvo.es -t validateauthor
+./dspace curate -i 10336/12945 -e prod-dspace@arvo.es -t validateauthor
+./dspace curate -i 10336/12018 -e prod-dspace@arvo.es -t validateauthor
+./dspace curate -i 10336/563 -e prod-dspace@arvo.es -t validateauthor
+./dspace curate -i 10336/4 -e prod-dspace@arvo.es -t validateauthor
+./dspace curate -i 10336/562 -e prod-dspace@arvo.es -t validateauthor
+./dspace curate -i 10336/568 -e prod-dspace@arvo.es -t validateauthor
+./dspace curate -i 10336/569 -e prod-dspace@arvo.es -t validateauthor
+./dspace curate -i 10336/565 -e prod-dspace@arvo.es -t validateauthor
+./dspace curate -i 10336/564 -e prod-dspace@arvo.es -t validateauthor
+./dspace curate -i 10336/567 -e prod-dspace@arvo.es -t validateauthor
+./dspace curate -i 10336/566 -e prod-dspace@arvo.es -t validateauthor

@@ -1,0 +1,15 @@
+﻿# E-mail sent to DSpace users when they register for an account
+#
+# Parameters: {0} is expanded to a special registration URL
+#
+# See org.dspace.core.Email for information on the format of this file.
+#
+Subject: Registro al Repositorio Institucional EdocUR Universidad del Rosario
+Para completar el registro de su cuenta en el Repositorio, por favor ingrese en el siguiente enlace:
+
+  {0}
+
+Si necesita asistencia con su cuenta, escríbanos a edocur@urosario.edu.co 
+
+Administrador Repositorio Institucional EdocUR
+

@@ -1,0 +1,17 @@
+# Email sent to DSpace users when they successfully export an item or collection.
+#
+# Parameters: {0} is expanded to a special URL
+#             {1} configurable time (hours) an export file will be kept
+#
+# See org.dspace.core.Email for information on the format of this file.
+#
+Subject: Repositorio Institucional EdocUR Universidad del Rosario - La exportación del archivo solicitado está lista para su descarga
+La exportación del archivo solicitado del Repositorio está lista para su descarga.
+
+Puede descargar el archivo comprimido utilizando el siguiente enlace:
+{0}
+
+El archivo se mantendrá habiltado por lo menos durante{1} horas.  
+
+
+Administrador Repositorio Institucional EdocUR

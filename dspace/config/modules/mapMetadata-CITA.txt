@@ -1,0 +1,182 @@
+###################################################################
+#                       APA CONFIGURATIONS                        #
+###################################################################
+
+# Esquema general de los metadatos #
+APA.schema = dc
+
+###################################################################
+#                              TIPOS                              #
+#                                                                 #
+#  Definicion:  APA.type. seguido del tipo de item (sin prefijo)  #
+###################################################################
+
+# Si el dc.type lleva algun prefijo se define en este campo
+APA.type.prefix = info:eu-repo/semantics/
+APA.type.book = book
+APA.type.bookpart = bookpart
+APA.type.bachelorThesis = bachelorThesis
+APA.type.masterThesis = masterThesis
+APA.type.doctoralThesis = doctoralThesis
+APA.type.review = review
+APA.type.conferenceObject = conferenceObject
+APA.type.workingPaper = workingPaper
+APA.type.preprint = preprint
+APA.type.report = report
+APA.type.other = other
+
+# Tipo por defecto, se usará cuando el dc.type del item no concuerde
+# con ninguno de los anteriores
+APA.default.type = default
+
+###################################################################
+#                            ESTRUCTURA                           #
+#                                                                 #
+# Definicion: APA."TIPO DE ITEM" (sin comillas) = seguido de la   #
+#             estructura que deba seguir el tipo de cita          #
+###################################################################
+
+APA.book = $author ($year). $title . Recuperado de $handle
+APA.bookpart = $author ($year). $title . Recuperado de $handle
+APA.article = $author ($year). $title . $journal : , $volume , $pageinitial - $pagefinal. Recuperado de $handle
+#APA.article = $author ($year). $partof. Recuperado de $handle
+#APA.bachelorThesis = $author ($year). $title. ($program) $place
+APA.bachelorThesis = $author ($year). $title. Recuperado de $handle
+#APA.masterThesis =$author ($year). $title. ($program) $place
+APA.masterThesis =$author ($year). $title. Recuperado de $handle
+#APA.doctoralThesis =$author ($year). $title. ($program) $place
+APA.doctoralThesis =$author ($year). $title. Recuperado de $handle
+#APA.review =$author ($year). $title . $place : $editorial
+APA.review =$author ($year). $title . Recuperado de $handle
+APA.conferenceObject = conferenceObject
+#APA.workingPaper = $author ($year). $title . $place : $editorial
+APA.workingPaper = $author ($year). $title . Recuperado de $handle
+APA.preprint = $author ($year). $title . Recuperado de $handle
+APA.report = $author ($year). $title . Recuperado de $handle
+APA.other = $author ($year). $title . Recuperado de $handle
+# Estructura por defecto cuando el dc.type no concuerde con ninguno
+# de los anteriores
+APA.default = No hay cita APA para este objeto
+
+###################################################################
+#                            PARAMETROS                           #
+#                                                                 #
+# Definicion: APA."TIPO DE ITEM". (sin comillas) seguido de la    # 
+#             variable que sera sustituida despues en la          #
+#             correspondiente estructura = METADATO ASOCIADO      #
+###################################################################
+
+# Si se necesita añadir varios metadatos al mismo parametro
+# basta con separarlos con ,
+# P.Ej. APA.book.author = dc.creator,dc.contributor.author,dc.contributor.advisor
+APA.book.author = dc.creator
+APA.book.year = dc.date.created
+APA.book.title = dc.title
+APA.book.place = dc.coverage
+APA.book.handle = dc.identifier.uri
+APA.book.editorial = dc.publisher
+
+APA.bookpart.author = dc.creator  
+APA.bookpart.year = dc.date.created
+APA.bookpart.title = dc.title
+APA.bookpart.book = dc.relation.ispartof
+APA.bookpart.pageinitial = dc.format.extent
+APA.bookpart.pagefinal = dc.format.extent
+APA.bookpart.place = dc.coverage
+APA.bookpart.editorial = dc.publisher
+APA.bookpart.handle = dc.handle
+
+APA.article.author = dc.creator  
+APA.article.year = dc.date.created
+APA.article.title = dc.title
+APA.article.journal = 
+APA.article.volume = 
+APA.article.pageinitial = 
+APA.article.pagefinal = 
+APA.article.handle = dc.handle
+
+APA.article.author = dc.creator  
+APA.article.year = dc.date.created
+APA.article.title = dc.title
+APA.article.partof = dc.relation.ispartof
+APA.article.handle = dc.handle
+
+APA.bachelorThesis.author = dc.creator  
+APA.bachelorThesis.year = dc.date.created
+APA.bachelorThesis.title = dc.title
+APA.bachelorThesis.program = dc.publisher.program
+APA.bachelorThesis.place = dc.coverage
+APA.article.handle = dc.handle
+
+APA.masterThesis.author = dc.creator  
+APA.masterThesis.year = dc.date.created
+APA.masterThesis.title = dc.title
+APA.masterThesis.program = dc.publisher.program
+APA.masterThesis.place = dc.coverage
+APA.masterThesis.handle = dc.handle
+
+APA.doctoralThesis.author = dc.creator  
+APA.doctoralThesis.year = dc.date.created
+APA.doctoralThesis.title = dc.title
+APA.doctoralThesis.program = dc.publisher.program
+APA.doctoralThesis.place = dc.coverage
+APA.doctoralThesis.handle = dc.handle
+
+APA.review.author = dc.creator  
+APA.review.year = dc.date.created
+APA.review.title = dc.title
+APA.review.program = dc.publisher.program
+APA.review.place = dc.coverage
+APA.review.handle = dc.handle
+
+APA.workingPaper.author = dc.creator  
+APA.workingPaper.year = dc.date.created
+APA.workingPaper.title = dc.title
+APA.workingPaper.program = dc.publisher.program
+APA.workingPaper.place = dc.coverage
+APA.workingPaper.handle = dc.handle
+
+APA.preprint.author = dc.creator  
+APA.preprint.year = dc.date.created
+APA.preprint.title = dc.title
+APA.preprint.handle = dc.handle
+
+APA.other.author = dc.creator  
+APA.other.year = dc.date.created
+APA.other.title = dc.title
+APA.other.handle = dc.handle
+
+###################################################################
+#                     TIPOS DE LOS PARAMETROS                     #
+#                                                                 #
+# Definicion: APA.pattern.type. seguido del nombre del            #
+# parametro = TIPO DE PARAMETRO                                   #
+#                                                                 #
+# Tipos admitidos: text, year, charlimit50, number                #
+###################################################################
+
+APA.pattern.type.author = text
+APA.pattern.type.place = text
+APA.pattern.type.editorial = text
+APA.pattern.type.handle = text
+
+
+APA.pattern.type.year = year
+
+APA.pattern.type.title = charlimit50
+APA.pattern.type.book = charlimit50
+APA.pattern.type.journal = charlimit50
+APA.pattern.type.bookpart = charlimit50
+APA.pattern.type.bachelorThesis = charlimit50
+APA.pattern.type.masterThesis = charlimit50
+APA.pattern.type.doctoralThesis = charlimit50
+APA.pattern.type.review = charlimit50
+APA.pattern.type.conferenceObject = charlimit50
+APA.pattern.type.workingPaper = charlimit50
+APA.pattern.type.preprint = charlimit50
+APA.pattern.type.report = charlimit50
+APA.pattern.type.other = charlimit50
+
+APA.pattern.type.pageinitial = number
+APA.pattern.type.pagefinal = number
+APA.pattern.type.volume = number

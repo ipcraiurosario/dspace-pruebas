@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+
+<!--
+  - dublin-core-types.xml
+  -
+  - Version:  $Revision$
+  -
+  - Date:     $Date$
+  -
+  - Initial contents for Dublin Core type registry.  Once the registry has
+  - been loaded, this file becomes obsolete; the current version of the
+  - registry must be read from the database.
+  - Use org.dspace.content.MetadataSchema, org.dspace.content.MetadataField, org.dspace.content.MetadataValue instead.
+  - Omit <qualifier> tags for unqualified elements
+  - 
+  - <dc-type>
+  -   <schema></schema>
+  -   <element></element>
+  -   <qualifier></qualifier>
+  -   <scope_note></scope_note>
+  - </dc-type>
+  -->
+
+<!-- start of XML -->
+
+<dspace-dc-types>
+
+  <dspace-header>
+    <title>DSpace Dublin Core Types Registry</title>
+    <contributor.author>Patsy Baudoin</contributor.author>
+    <contributor.author>Margret Branschofsky</contributor.author>
+    <contributor.author>Dan Chudnov</contributor.author>
+    <contributor.author>Joan Kolias</contributor.author>
+    <contributor.author>Rebecca Lubas</contributor.author>
+    <contributor.author>Sarah Mitchell</contributor.author>
+    <contributor.editor>$Author$</contributor.editor>
+    <date.created>$Date$</date.created>
+    <description>
+      $Log$
+      Revision 1.5  2006/10/18 15:38:34  cjuergen
+      (Claudia Juergen)
+      config/registries/dublin-core-types.xml replaced deprecated reference to org.dspace.administer.DCType.java  with the reference to the appropriate org.dspace.content.Metadata... classes
+
+      Revision 1.4  2005/11/16 21:40:52  rtansley
+      (Martin Hald, Larry Stone, Robert Tansley)
+      - Support for multiple (flat) metadata schemas
+      NOTE: Still some items to do
+
+      Revision 1.3  2002/11/01 13:28:47  rtansley
+      Added new bitstream formats.
+      Added comments indicating which formats and DC types are needed by the system
+      to function.
+
+      Revision 1.2  2002/10/21 09:29:31  rtansley
+      Updated DC type registry and submission UI to include "identifier.citation",
+      "publisher", and "type".  Simple item display also includes those fields.
+
+      Revision 1.1  2002/05/16 20:11:57  rtansley
+      Registries ported from DSpace early-adopters-2.
+
+      Revision 1.12  2002/01/24 21:49:38  dchud
+      Many changes; changed subject.keyword to .other, added description.statementofresponsibility, fixed spelling and updated scope notes
+
+      Revision 1.11  2001/11/27 16:00:04  dstuve
+      added subject_mesh for importing - should we keep this?
+
+      Revision 1.10  2001/11/02 17:57:35  dchud
+      Added identifier.citation
+
+      Revision 1.9  2001/10/22 18:09:17  dchud
+      Removed contributor.translator mistakenly left in. :(
+
+      Revision 1.8  2001/10/18 20:35:31  dchud
+      Changed contributor qualifiers and added relation.ispartofseries
+
+      Revision 1.7  2001/10/10 17:54:15  dchud
+      added all authors.
+
+      Revision 1.6  2001/10/10 17:22:55  dchud
+      (hopefully) fixed cvs keyword Log to expand in tags properly.
+
+    </description>
+    <description.version>$Revision$</description.version>
+  </dspace-header>
+
+  <dc-schema>
+          <name>dc</name>
+          <namespace>http://dublincore.org/documents/dcmi-terms/</namespace>
+  </dc-schema>
+
+    <dc-type>
+        <schema>dc</schema>
+        <element>subject</element>
+        <qualifier>keyword</qualifier>
+        <scope_note></scope_note>
+    </dc-type>
+
+    <dc-type>
+        <schema>dc</schema>
+        <element>creator</element>
+        <qualifier>degree</qualifier>
+        <scope_note></scope_note>
+    </dc-type>
+    
+     <dc-type>
+        <schema>dc</schema>
+        <element>rights</element>
+        <qualifier>accesRights</qualifier>
+        <scope_note></scope_note>
+    </dc-type>
+    
+      <dc-type>
+        <schema>dc</schema>
+        <element>source</element>
+        <qualifier>bibliographicCitation</qualifier>
+        <scope_note></scope_note>
+    </dc-type>
+    
+     <dc-type>
+        <schema>dc</schema>
+        <element>identifier</element>
+        <qualifier>local</qualifier>
+        <scope_note></scope_note>
+    </dc-type>
+    
+     <dc-type>
+        <schema>dc</schema>
+        <element>rights</element>
+        <qualifier>acceso</qualifier>
+        <scope_note></scope_note>
+    </dc-type>
+    
+     <dc-type>
+        <schema>dc</schema>
+        <element>subject</element>
+        <qualifier>lemb</qualifier>
+        <scope_note></scope_note>
+    </dc-type>
+    
+     <dc-type>
+        <schema>dc</schema>
+        <element>subject</element>
+        <qualifier>decs</qualifier>
+        <scope_note></scope_note>
+    </dc-type>
+    
+         <dc-type>
+        <schema>dc</schema>
+        <element>subject</element>
+        <qualifier>ddc</qualifier>
+        <scope_note></scope_note>
+    </dc-type>
+  
+</dspace-dc-types>

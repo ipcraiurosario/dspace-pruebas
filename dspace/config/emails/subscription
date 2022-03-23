@@ -1,0 +1,12 @@
+# E-mail sent to DSpace users when new items appear in collections they are
+# subscribed to
+#
+# Parameters: {0} is the details of the new collections and items
+# See org.dspace.core.Email for information on the format of this file.
+#
+Subject: Suscripción Repositorio Institucional EdocUR Universidad del Rosario 
+Nuevos archivos están disponibles en la colección que usted ha susctrito:
+
+{0}
+
+Administrador Repositorio Institucional EdocUR

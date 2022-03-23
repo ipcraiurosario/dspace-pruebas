@@ -1,0 +1,27 @@
+# Workflow task email message
+#
+# {0}  Title of submission
+# {1}  Name of collection
+# {2}  submitter's name
+# {3}  Description of task
+# {4}  link to 'my DSpace' page 
+#
+Subject: Repositorio Institucional EdocUR Universidad del Rosario: Usted tiene una nueva tarea
+
+Un nuevo archivo ha sido enviado:
+
+Título:        {0}
+Colección:     {1}
+Enviado por:   {2}
+
+{3}
+
+Para tramitar esta tarea, por favor entre a "su perfil":  {4}
+
+¡Muchas gracias!
+
+Cualquier inquietud por favor comuniquese con nosotros.
+
+
+Administrador Repositorio Institucional EdocUR
+edocur@urosario.edu.co

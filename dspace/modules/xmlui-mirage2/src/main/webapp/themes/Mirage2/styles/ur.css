@@ -1,0 +1,625 @@
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #333;
+   /* background-color: none;*/
+	background:url("/themes/Mirage2/images/ur/fondo.jpg") no-repeat fixed;
+	background-size: 100% 100%;
+}
+
+.item-summary-view-metadata .dropdown-menu>li>a {
+    text-transform: none;
+}
+
+#video-preview {
+    margin-top: 10px;
+}
+
+#audioMp3 audio {
+    width: 100%;
+}
+
+.bitstream_icon {
+    width: 40px;
+    float: left;
+    display: table-row;
+    margin-right: 4px;
+}
+
+input#seguimiento_btn {
+    background-color: transparent !important;
+    border: 0px !important;
+    color: #000 !important;
+    padding-left: 17px !important;
+}
+
+.navbar-nav>li,  li#ds-language-selection span,.dropdown-menu>li>a{
+    text-transform: capitalize;
+}
+
+
+.header-bar{
+		margin-top: 10px;
+		background-color:#8c9192;
+		
+}
+
+	.home-no-background .first-page-header {
+		display: none;
+	}	
+	
+	div#ds-search-option {
+		display: none;
+	}
+
+.trail-wrapper {
+    background-color: transparent !important;
+    border-bottom: transparent !important;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.text-reconocimientos {
+    font-size: 14px;
+    color: #575656;
+}
+
+.text-reconocimientos  img{
+	width:100px;
+}
+
+
+.text-bold {
+	font-weight:bold;
+	
+}
+
+	.ds-logo-wrapper {
+		position: absolute;
+		top: 15px;
+	}
+
+	.first-page-header {
+		margin-top: 0;
+		margin-left: 140px;
+	}
+	
+
+
+	#aspect_browseArtifacts_CommunityBrowse_div_community-browse, #aspect_browseArtifacts_CollectionBrowse_div_collection-browse {
+		margin-bottom: 10px;
+		margin-left: 140px;
+	}
+
+	form#aspect_discovery_CommunitySearch_div_community-search {
+		margin-left: 16px;
+		margin-top: 30px;
+	}
+	
+	h3.ds-div-head, form#aspect_discovery_CommunitySearch_div_community-search p {
+		font-weight: bold;
+	}
+
+	.PlumX-Details .ppd-box {
+		width: 220px !important;
+	}
+	
+	/*.plumx-altmetrics{
+		padding-bottom:10px;
+	}*/
+	
+	.plumx-altmetrics {
+    /* overflow: hidden; */
+    padding-bottom: 10px;
+    /*float: right;*/
+    display: inline-grid;
+	}
+	
+	/*Estilos del home de comunidades y colecciones*/
+	/*div#community_comments {
+		border: solid 1px;
+		border-radius: 10px;
+		padding-left: 20px;
+		padding-top: 10px;
+	}*/
+	
+	button#community_collection_btn {
+		width: 100%;
+		background: gray;
+		color: #fff;
+		border-radius: 10px;
+		margin: 5px;
+	}
+	
+	button#community_collection_btn h3 {
+		line-height: 5px;
+		font-size: 18px;
+	}
+	
+/*.first-page-header {
+    display: none;
+}*/
+
+.item-link-show-full {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#aspect_discovery_SiteRecentSubmissions_div_site-home{
+	display:none;
+}
+
+/* Estilos para el home page*/
+
+#home_search_box img {
+    margin-right: 21px;
+}
+
+div#search_box {
+    width: 100%;
+	margin-top: 30px;
+}
+
+div#home_search_box {
+    margin-top: 30px;
+    display: inline-flex;
+    width: 100%;
+}
+
+
+div#home_search_box img {
+   padding-bottom: 30px;
+}
+
+form#aspect_discovery_SiteViewer_div_front-page-search-custom {
+    display: inline-flex;
+    width: 100%;
+}
+
+button#aspect_discovery_SiteViewer_field_submit {
+    margin-right: 30px;
+}
+
+input#aspect_discovery_SiteViewer_field_query {
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+
+p.ds-paragraph {
+    /*text-align: center;*/
+}
+
+p.ds-paragraph img {
+    width: 130px;
+    height: 130px;
+	margin-left: 3%;
+}
+
+footer {
+    margin-top: 30px;
+}
+
+
+.reconocimientos {
+    text-align: center;
+    margin-top: 40px;
+}
+
+button.navbar-toggle.visible-sm {
+    display: none !important;
+}
+
+
+/*Fin Home page*/
+
+
+/* Estilos para visualizacion de items*/
+
+
+li.ds-artifact-item a {
+    text-decoration: none;
+    font-weight: bold;
+	text-align: justify;
+}
+
+li.ds-artifact-item:hover {
+    background-color: rgb(236, 236, 236);
+}
+
+li.ds-artifact-item {
+	margin-bottom:30px;
+	text-align: justify;
+}
+
+.author {
+    font-style: normal;
+	font-size: 16px !important;
+}
+
+p#aspect_discovery_CommunityRecentSubmissions_p_recent-submission-view-more {
+    font-weight: bold;
+}
+
+img.img-thumbnail {
+    width: 112px !important;
+    height: 160px !important;
+}
+
+.item-page-field-wrapper.table.word-break a {
+/*    color: transparent;
+    background-image: url(/themes/Mirage2/images/ur/download_btn.png);
+    background-repeat: no-repeat;
+    display: flex;*/ 
+
+}
+   
+
+.navbar-default span {
+    color: #eee;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif !important;
+	text-transform: initial;
+}
+
+/*iconos del footer del home*/
+.footer-common img{
+	width:110px;
+	margin-right:40px;
+}
+
+
+
+/*redes_sociales*/
+#botones_redes{
+	float:right;
+	width:auto;
+	height:auto;	
+	position:fixed;
+	top:300px;
+	right:0px;
+	z-index:1000;
+}
+
+.twitter,.facebook,.youtube,.contactus{
+	width:45px;
+	height:45px;
+	float:right;
+	background-position:center;
+	background-repeat:no-repeat;
+	clear:both;
+	text-decoration:none;
+	color:transparent !important;
+	border-radius: 5px 0px 0px 5px;
+	margin-top:1px;
+	background-color:rgba(105, 105, 105, 0.8);
+}
+
+.contactus{
+	background-image:url(/themes/Mirage2/images/ur/contactus.png);
+}
+
+.twitter{
+	background-image:url(/themes/Mirage2/images/ur/twitter.png);
+}
+
+.facebook{
+	background-image:url(/themes/Mirage2/images/ur/facebook.png);
+}
+
+.youtube{
+	background-image:url(/themes/Mirage2/images/ur/youtube.png);
+}
+
+.twitter:hover ,.facebook:hover,.youtube:hover,.contactus:hover{
+    background-position: left;
+    color: #FFF !important;
+    width: 105px;
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: right;
+    padding-top: 10px;
+    text-decoration: none;
+    padding-right: 10px;
+}
+
+.contactus:hover{
+	background-color: #1F8A70;
+}
+
+.twitter:hover{
+    background-color: #4099FF;
+}
+
+.facebook:hover{
+	background-color:#3b5998;
+}
+
+.youtube:hover{
+	background-color:#cd332d !important; 
+}
+
+.item-title {
+    font-weight: bold;
+}
+
+.main-content {
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	min-height: 620px;
+	float: right !important;
+
+}
+
+#main-container #sidebar {
+    /*background-color: #f7f7f7;
+ *     display: inline-flex;*/
+    width: 23% !important;
+    margin-left: 2px !important;
+}
+
+img[alt:'No Thumbnail [100%x160]'] {
+	display:none;
+}
+
+@media(max-width:768px){
+ #main-container #sidebar{
+	width: 100% !important;
+	margin: 0px !important;
+ }
+}
+@media (min-width: 768px){
+	
+	.creative-commons {
+    background-color: #f7f7f7;
+    margin: 5px;
+    border-radius: 10px;
+    width: 98%;
+	padding:10px;
+	}
+	
+	
+	
+	
+	
+	.simple-item-view-authors.item-page-field-wrapper.table {
+		margin-top: 20px;
+	}
+	
+	.home-no-background{
+		background-color: transparent !important;
+	}
+
+
+	header .navbar-default {
+		background-color: transparent !important;
+	}
+
+	img.float-left {
+		float: right;
+	}
+
+	.row.header-ur {
+		background: #FFF ;
+	}
+	
+	.header-bar{
+		background-color:#8c9192;
+		border-radius:5px;
+	}
+	
+	header .navbar-default {
+		background-color: transparent !important;
+	}
+	
+	.navbar-brand{
+		display:none;
+	}
+	
+	.glyphicon-user:after {
+		content: "\00a0 "; 
+	}
+	
+	
+	/*Ajuste del home de comunidad*/
+	
+	#main-container .row-offcanvas {
+		background-color: transparent;
+	}
+		
+	#main-container #sidebar {
+		background-color: #f7f7f7;
+		box-shadow: 2px 2px 10px #615f5f;
+		-webkit-box-shadow: 2px 2px 10px #615f5f;
+		-moz-box-shadow: 2px 2px 10px #615f5f;
+		margin: 5px;
+		border-radius: 10px;
+	}
+	
+	.main-content {
+		box-shadow: 2px 2px 10px #615f5f;
+		-webkit-box-shadow: 2px 2px 10px #615f5f;
+		-moz-box-shadow: 2px 2px 10px #615f5f;
+		border-radius: 10px;
+		margin: 5px;
+		width: 70%;
+		float: right;
+		
+	}
+	
+	/*.thumbnail>img, .thumbnail a>img {
+		width: 107px;
+		height: 160px;
+	}*/
+
+
+	/*Archivos de item*/
+	.thumbnail>img {
+		margin-top: 10px;
+		box-shadow: 2px 2px 4px 4px #a4a4a4;
+	}
+	
+	
+
+	
+	.shake-slow {
+    animation-name: shake-slow;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 5;
+	}
+	
+	
+	/*slider open access*/
+	
+	.politica_oa {
+		/*background-image: url(/themes/Mirage2/images/ur/politicaoa.png);*/
+		background-position: right;
+		background-repeat: no-repeat;
+		background-color: transparent;
+		position: fixed;
+		top: 65%;
+		float: left;
+		clear: both;
+		line-height: 70px;
+		margin-left: -116px;
+	}
+	
+
+	.politica_oa p {
+		color: transparent;
+		margin: 0 0 10px;
+		text-align: justify;
+	}
+	
+	.politica_oa img {
+		margin-left: -69px;
+		position: fixed;
+	}
+
+	.politica_oa:hover {
+		margin-left: 50px;
+		transition: all 1s ease-in;
+		-webkit-transition: all 1s ease-in;
+		-o-transition: all 1s ease-in;
+		-moz-transition: all 1s ease-in;
+		-ms-transition: all 1s ease-in;
+	}
+	
+	.politica_oa:hover p {
+		color: #FFF;
+		display: flex;
+		font-size: 11px;
+	}
+	
+img.upload_icon {
+	    width: 100px;
+    margin-top: 10%;
+}	
+	
+
+}
+
+
+@media (max-width: 1200px){	
+	.header-ur img.float-left {
+		display: none;
+	}
+}
+
+@media (max-width: 768px){	
+	.header-logos {
+		display: none;
+	}
+	
+	.header-bar{
+		background-color:#B31C27;
+	}
+	
+	header .navbar-default {
+		background-color: transparent;
+	}
+	
+	#home_search_box img {
+		display:none;
+	}
+	
+	/* Home de comunidad */
+	.main-content {
+		width: 100%;
+	}
+	
+	
+}
+
+/*  HBC:Visualización de recen submissions*/
+.artifact-description a h4, .artifact-title {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: justify;
+}
+
+.artifact-info .abstract, .artifact-abstract {
+    font-size: 12px;
+    text-align: justify;
+}
+
+
+.thumbnail>img, .thumbnail a>img {
+    width: 112px;
+    height: 160px;
+}
+
+span.item-properties {
+    font-size: 12px;
+    font-style: italic;
+}
+
+
+/*
+	###
+	# Nuevas autoridades
+	###
+*/
+
+#vcard-add-new-span input{
+	margin-top:-40px;
+	margin-left:520px;
+	position:fixed;
+}
+
+.inAutoridad {
+    font-weight: bold;
+}
+
+.logo-autoridad {
+    margin-left: 5px;
+}
+p.ds-paragraph img {
+    width: 111px;
+    height: auto !important;
+    /* margin: 0 auto !important; */
+}
+
+.reconocimientos>ul>li img {
+    height: 4em !important;
+    float: right;
+    padding-right: 15px;
+}
+
+.reconocimientos>ul>li {
+    list-style-type: none;
+}
+
+.bloque-archivos {
+	clear: both;
+	display: block;
+	margin-bottom: 8px;
+	overflow: hidden;
+}

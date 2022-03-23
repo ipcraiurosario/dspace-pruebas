@@ -1,0 +1,17 @@
+﻿# Email sent to DSpace users when they BTE batch import fails.
+#
+# Parameters: {0} the export error
+#             {1} the URL to the feedback page
+#             
+#
+# See org.dspace.core.Email for information on the format of this file.
+#
+Subject: Repositorio Institucional EdocUR Universidad del Rosario - La importación por lotes no se completó.
+La importación por lotes que inició desde la interfaz de usuario del Repositorio no se completó debido a la siguiente razón:
+ {0}
+
+Para más información, contácte al administrador del sistema:
+ {1}
+
+
+Administrador Repositorio Institucional EdocUR
