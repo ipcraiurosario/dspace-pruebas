@@ -1,8 +1,8 @@
 # The FULL URL to the DSpace sitemaps
-# The ${dspace.url} will be auto-filled with the value in dspace.cfg
+# The https://repository.urosario.edu.co will be auto-filled with the value in dspace.cfg
 # XML sitemap is listed first as it is preferred by most search engines
-Sitemap: ${dspace.url}/sitemap
-Sitemap: ${dspace.url}/htmlmap
+Sitemap: https://repository.urosario.edu.co/sitemap
+#Sitemap: https://repository.urosario.edu.co/htmlmap
 
 ##########################
 # Default Access Group
@@ -12,24 +12,50 @@ User-agent: *
 # Disable access to Discovery search and filters
 Disallow: /discover
 Disallow: /search-filter
+#Disallow: /
+
+User-agent:google
+Disallow: /search-filter
+Disallow: /statistics
+Disallow: /handle/10336/*/browse
+Disallow: /contact
+Disallow: /feedback
+Disallow: /advanced-search
+Disallow: /forgot
+Disallow: /login
+Disallow: /register
+Disallow: /search
+
+
+#Cambios-error-blank-page
+Disallow: /browse
+Disallow: /browse-date
+Disallow: /htmlmap
+Disallow: /html
+Disallow: /browse-*
+Disallow: /items-by-author*
+
+
 
 #
 # Optionally uncomment the following line ONLY if sitemaps are working
 # and you have verified that your site is being indexed correctly.
 # Disallow: /browse
-# Disallow: /handle/${handle.prefix}/*/browse
+ Disallow: /handle/10336/*/browse
 #
-# If you have configured DSpace (Solr-based) Statistics to be publicly 
+# If you have configured DSpace (Solr-based) Statistics to be publicly
 # accessible, then you may not want this content to be indexed
-# Disallow: /statistics
+ Disallow: /statistics
 #
 # You also may wish to disallow access to the following paths, in order
 # to stop web spiders from accessing user-based content
-# Disallow: /contact
-# Disallow: /feedback
-# Disallow: /forgot
-# Disallow: /login
-# Disallow: /register
+ Disallow: /contact
+ Disallow: /feedback
+ Disallow: /advanced-search
+ Disallow: /forgot
+ Disallow: /login
+ Disallow: /register
+ Disallow: /search
 
 
 ##############################
@@ -116,7 +142,7 @@ User-agent: fast
 Disallow: /
 
 #
-# If your DSpace is going down because of someone using recursive wget, 
+# If your DSpace is going down because of someone using recursive wget,
 # you can activate the following rule.
 #
 # If your own faculty is bringing down your dspace with recursive wget,
@@ -146,4 +172,685 @@ Disallow: /
 # A capture bot, downloads gazillions of pages with no public benefit
 # http://www.webreaper.net/
 User-agent: WebReaper
+Disallow: /
+
+# projectcounter.org
+#list useragents seen by PLOS in descending order of hits on 2012-07-19
+
+User-agent:bot
+Disallow: /
+
+User-agent:bot[+:,\.\;\/\\-]
+Disallow: /
+
+#User-agent:google
+#Disallow: /
+
+User-agent:[+:,\.\;\/\\-]bot
+Disallow: /
+
+User-agent: Googlebot
+Allow: /
+Disallow: /flexpaper/
+Disallow: /csv?
+Disallow: /bibtex
+Disallow: /handle/10336/*/statistics
+Disallow: /handle/10336/*?locale-attribute
+Disallow: /handle/10336/*/browse?
+Disallow: /handle/10336/*/search-filter?
+Disallow: /search-filter?
+
+
+User-agent:LOCKSS
+Disallow: /
+
+User-agent:spide,
+Disallow: /
+
+User-agent:cfnetwork|checkbot
+Disallow: /
+
+User-agent:Webmetrics
+Disallow: /
+
+User-agent:robot
+Disallow: /
+
+User-agent:yahoo
+Disallow: /
+
+User-agent:feedfetcher\-google
+Disallow: /
+
+User-agent:baiduspide,
+Disallow: /
+
+User-agent:mj12bot
+Disallow: /
+
+User-agent:slurp
+Disallow: /
+
+User-agent:crawl
+Disallow: /
+
+User-agent:crawle,
+Disallow: /
+
+User-agent:java
+Disallow: /
+
+User-agent:java\/
+Disallow: /
+
+User-agent:feedburne,
+Disallow: /
+
+User-agent:yandex
+Disallow: /
+
+User-agent:bspide,
+Disallow: /
+
+User-agent:python
+Disallow: /
+
+User-agent:ichiro
+Disallow: /
+
+User-agent:urllib
+Disallow: /
+
+User-agent:Python\-urllib
+Disallow: /
+
+User-agent:alexa
+Disallow: /
+
+User-agent:urlaliasbuilde,
+Disallow: /
+
+User-agent:rss
+Disallow: /
+
+User-agent:sogou
+Disallow: /
+
+User-agent:exabot
+Disallow: /
+
+User-agent:scirus
+Disallow: /
+
+User-agent:MSNBotnagios
+Disallow: /
+
+User-agent:libwww
+Disallow: /
+
+User-agent:libwww\-perl
+Disallow: /
+
+User-agent:bbot
+Disallow: /
+
+User-agent:Wget
+Disallow: /
+
+User-agent:lwp
+Disallow: /
+
+User-agent:docomo
+Disallow: /
+
+User-agent:commons\-httpclient
+Disallow: /
+
+User-agent:robots
+Disallow: /
+
+User-agent:moto,
+Disallow: /
+
+User-agent:wordpress
+Disallow: /
+
+User-agent:LWP\:\:Simple
+Disallow: /
+
+User-agent:ia_archive,
+Disallow: /
+
+User-agent:y!j
+Disallow: /
+
+User-agent:custo
+Disallow: /
+
+User-agent:mail.ru
+Disallow: /
+
+User-agent:linkcheck
+Disallow: /
+
+User-agent:voila
+Disallow: /
+
+User-agent:archive\.org_bot
+Disallow: /
+
+User-agent:core
+Disallow: /
+
+User-agent:yodaobot
+Disallow: /
+
+User-agent:lwp\-trivial
+Disallow: /
+
+User-agent:nutch
+Disallow: /
+
+User-agent:heritrix
+Disallow: /
+
+User-agent:OurBrowse,
+Disallow: /
+
+User-agent:jeeves
+Disallow: /
+
+User-agent:surveybot
+Disallow: /
+
+User-agent:arks
+Disallow: /
+
+User-agent:yahoofeedseeke,
+Disallow: /
+
+User-agent:daumoa
+Disallow: /
+
+User-agent:powermarks
+Disallow: /
+
+User-agent:linkbot
+Disallow: /
+
+User-agent:seznambot
+Disallow: /
+
+User-agent:sunrise
+Disallow: /
+
+User-agent:ramble,
+Disallow: /
+
+User-agent:Wanadoo
+Disallow: /
+
+User-agent:linkscan
+Disallow: /
+
+User-agent:yacy
+Disallow: /
+
+User-agent:httrack
+Disallow: /
+
+User-agent:linkchecke,
+Disallow: /
+
+User-agent:Goldfire(\s|\+)Serve,
+Disallow: /
+
+User-agent:Xenu(\s|\+)Link(\s|\+)Sleuth
+Disallow: /
+
+User-agent:xenu
+Disallow: /
+
+User-agent:htmlparse,
+Disallow: /
+
+User-agent:findlinks
+Disallow: /
+
+User-agent:Microsoft(\s|\+)URL(\s|\+)Control
+Disallow: /
+
+User-agent:msiecrawle,
+Disallow: /
+
+User-agent:ultraseek
+Disallow: /
+
+User-agent:larbin
+Disallow: /
+
+User-agent:DSurf
+Disallow: /
+
+User-agent:Teoma
+Disallow: /
+
+User-agent:Fetch(\s|\+)API(\s|\+)Request
+Disallow: /
+
+User-agent:mediapartners\-google
+Disallow: /
+
+User-agent:iSiloX
+Disallow: /
+
+User-agent:WebCopie,
+Disallow: /
+
+User-agent:spiderman
+Disallow: /
+
+User-agent:girafabot
+Disallow: /
+
+#User-agent:
+#Disallow: /
+
+# The rest on the projectcounter.org list.
+User-agent:Alexandria(\s|\+)prototype(\s|\+)project
+Disallow: /
+
+User-agent:AllenTrack
+Disallow: /
+
+User-agent:Arachmo
+Disallow: /
+
+User-agent:Brutus\/AET
+Disallow: /
+
+User-agent:China\sLocal\sBrowse\s2\.6
+Disallow: /
+
+User-agent:Code\sSample\sWeb\sClient
+Disallow: /
+
+User-agent:ContentSmartz
+Disallow: /
+
+User-agent:DataCha0s\/2\.0
+Disallow: /
+
+User-agent:Demo\sBot
+Disallow: /
+
+User-agent:EmailSiphon
+Disallow: /
+
+User-agent:EmailWolf
+Disallow: /
+
+User-agent:FDM(\s|\+)1
+Disallow: /
+
+User-agent:GetRight
+Disallow: /
+
+User-agent:Milbot
+Disallow: /
+
+User-agent:MuscatFerre
+Disallow: /
+
+User-agent:NABOT
+Disallow: /
+
+User-agent:NaverBot
+Disallow: /
+
+User-agent:Offline(\s|\+)Navigato,
+Disallow: /
+
+User-agent:Readpape,
+Disallow: /
+
+User-agent:Stride,
+Disallow: /
+
+User-agent:T\-H\-U\-N\-D\-E\-R\-S\-T\-O\-N\-E
+Disallow: /
+
+User-agent:Teleport(\s|\+)Pro
+Disallow: /
+
+User-agent:Web(\s|\+)Downloade,
+Disallow: /
+
+User-agent:WebClone,
+Disallow: /
+
+User-agent:WebReape,
+Disallow: /
+
+User-agent:WebStrippe,
+Disallow: /
+
+User-agent:WebZIP
+Disallow: /
+
+User-agent:Webinato,
+Disallow: /
+
+User-agent:[^a]fish
+Disallow: /
+
+User-agent:^voyager\/
+Disallow: /
+
+User-agent:acme\.spide,
+Disallow: /
+
+User-agent:almaden
+Disallow: /
+
+User-agent:appie
+Disallow: /
+
+User-agent:architext
+Disallow: /
+
+User-agent:asterias
+Disallow: /
+
+User-agent:atomz
+Disallow: /
+
+User-agent:autoemailspide,
+Disallow: /
+
+User-agent:awbot
+Disallow: /
+
+User-agent:biadu
+Disallow: /
+
+User-agent:biglotron
+Disallow: /
+
+User-agent:bjaaland
+Disallow: /
+
+User-agent:blaiz\-bee
+Disallow: /
+
+User-agent:bloglines
+Disallow: /
+
+User-agent:blogpulse
+Disallow: /
+
+User-agent:boitho\.com\-dc
+Disallow: /
+
+User-agent:bookmark\-manage,
+Disallow: /
+
+User-agent:bwh3_user_agent
+Disallow: /
+
+User-agent:celestial
+Disallow: /
+
+User-agent:combine
+Disallow: /
+
+User-agent:contentmatch
+Disallow: /
+
+User-agent:curso,
+Disallow: /
+
+User-agent:dtSearchSpide,
+Disallow: /
+
+User-agent:dumbot
+Disallow: /
+
+User-agent:easydl
+Disallow: /
+
+User-agent:fast-webcrawle,
+Disallow: /
+
+User-agent:favorg
+Disallow: /
+
+User-agent:ferret
+Disallow: /
+
+User-agent:gaisbot
+Disallow: /
+
+User-agent:geturl
+Disallow: /
+
+User-agent:gigabot
+Disallow: /
+
+User-agent:gnodspide,
+Disallow: /
+
+User-agent:grub
+Disallow: /
+
+User-agent:gullive,
+Disallow: /
+
+User-agent:harvest
+Disallow: /
+
+User-agent:hl_ftien_spide,
+Disallow: /
+
+User-agent:holmes
+Disallow: /
+
+User-agent:htdig
+Disallow: /
+
+User-agent:httpget\-5\.2\.2
+Disallow: /
+
+User-agent:httpget\?5\.2\.2
+Disallow: /
+
+User-agent:iktomi
+Disallow: /
+
+User-agent:ilse
+Disallow: /
+
+User-agent:internetsee,
+Disallow: /
+
+User-agent:intute
+Disallow: /
+
+User-agent:jobo
+Disallow: /
+
+User-agent:kyluka
+Disallow: /
+
+User-agent:lilina
+Disallow: /
+
+User-agent:linkwalke,
+Disallow: /
+
+User-agent:livejournal\.com
+Disallow: /
+
+User-agent:lmspide,
+Disallow: /
+
+User-agent:lwp\-request
+Disallow: /
+
+User-agent:lwp\-tivial
+Disallow: /
+
+User-agent:lycos[_+]
+Disallow: /
+
+User-agent:megite
+Disallow: /
+
+User-agent:milbot
+Disallow: /
+
+User-agent:mimas
+Disallow: /
+
+User-agent:mnogosearch
+Disallow: /
+
+User-agent:moget
+Disallow: /
+
+User-agent:mojeekbot
+Disallow: /
+
+User-agent:momspide,
+Disallow: /
+
+User-agent:myweb
+Disallow: /
+
+User-agent:netcraft
+Disallow: /
+
+User-agent:netluchs
+Disallow: /
+
+User-agent:ng\/2\.
+Disallow: /
+
+User-agent:no_user_agent
+Disallow: /
+
+User-agent:nomad
+Disallow: /
+
+User-agent:ocelli
+Disallow: /
+
+User-agent:onetszukaj
+Disallow: /
+
+User-agent:perman
+Disallow: /
+
+User-agent:pionee,
+Disallow: /
+
+User-agent:playmusic\.com
+Disallow: /
+
+User-agent:playstarmusic\.com
+Disallow: /
+
+User-agent:psbot
+Disallow: /
+
+User-agent:qihoobot
+Disallow: /
+
+User-agent:redalert|robozilla
+Disallow: /
+
+User-agent:scan4mail
+Disallow: /
+
+User-agent:scientificcommons
+Disallow: /
+
+User-agent:scoote,
+Disallow: /
+
+User-agent:seekbot
+Disallow: /
+
+User-agent:shoutcast
+Disallow: /
+
+User-agent:speedy
+Disallow: /
+
+User-agent:spiderview
+Disallow: /
+
+User-agent:superbot
+Disallow: /
+
+User-agent:tailrank
+Disallow: /
+
+User-agent:technoratibot
+Disallow: /
+
+User-agent:titan
+Disallow: /
+
+User-agent:turnitinbot
+Disallow: /
+
+User-agent:twicele,
+Disallow: /
+
+User-agent:ucsd
+Disallow: /
+
+User-agent:virus[_+]detecto,
+Disallow: /
+
+User-agent:w3c\-checklink
+Disallow: /
+
+User-agent:webcollage
+Disallow: /
+
+User-agent:weblayers
+Disallow: /
+
+User-agent:webmirro,
+Disallow: /
+
+User-agent:webreape,
+Disallow: /
+
+User-agent:worm
+Disallow: /
+
+User-agent:yahoo\-mmcrawle,
+Disallow: /
+
+User-agent:yahooseeke,
+Disallow: /
+
+User-agent:zealbot
+Disallow: /
+
+User-agent:zeus
+Disallow: /
+
+User-agent:zyborg
+Disallow: /
+
+
+# A couple robots PLOS blocks, not on the counter list.  (Added by rcave.)
+User-agent:jikespide,
+Disallow: /
+
+User-agent:Scirus(\s|\+)Document(\s|\+)Retrieve,
 Disallow: /
