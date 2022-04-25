@@ -1,0 +1,1221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE node [
+    <!ENTITY aacute "&#225;"> <!ENTITY eacute "&#233;"> <!ENTITY iacute "&#237;"> <!ENTITY oacute "&#243;"> <!ENTITY uacute "&#250;">
+]>
+<!--
+Dewey Decimal Classification - Español - Edición 21
+
+Fuente: http://www.dgire.unam.mx/contenido_wp/bibliotecas/pdfs/scdDewey.pdf
+-->
+
+<node id="DDC" label="DDC">
+    <isComposedBy>
+        <node id="000" label="Generalidades">
+            <isComposedBy>
+                        <node id="001" label="Conocimiento" />
+                        <node id="002" label="El libro" />
+                        <node id="003" label="Sistemas" />
+                        <node id="004" label="Procesamiento de datos Ciencia de los computadores" />
+                        <node id="005" label="Programaci&oacute;n, programas, datos de computaci&oacute;n" />
+                        <node id="006" label="M&eacute;todos especiales de computaci&oacute;n" />
+                <node id="010" label="Bibliograf&iacute;a">
+                    <isComposedBy>
+                        <node id="011" label="Bibliograf&iacute;as" />
+                        <node id="012" label="De individuos" />
+                        <node id="013" label="De obras por clases espec&iacute;ficas de autores " />
+                        <node id="014" label="De obras an&oacute;nimas &amp; seud&oacute;nimas" />
+                        <node id="015" label="De obras de lugares espec&iacute;ficos" />
+                        <node id="016" label="De obras sobre temas espec&iacute;ficos" />
+                        <node id="017" label="Cat&aacute;logos generales por materia" />
+                        <node id="018" label="Cat&aacute;logos ordenados por autor,  fecha, etc." />
+                        <node id="019" label="Cat&aacute;logos diccionario" />
+                    </isComposedBy>
+                    </node>
+                <node id="020" label="Bibliotecolog&iacute;a &amp; ciencias de la informaci&oacute;n">
+                    <isComposedBy>
+                        <node id="021" label="Relaciones bibliotecarias" />
+                        <node id="022" label="Administraci&oacute;n  de la planta f&iacute;sica" />
+                        <node id="023" label="Administraci&oacute;n de personal" />
+                        <node id="025" label="Operaciones bibliotecarias" />
+                        <node id="026" label="Bibliotecas para temas espec&iacute;ficos" />
+                        <node id="027" label="Bibliotecas generales" />
+                        <node id="028" label="Lectura, uso de otros medios de informaci&oacute;n" />
+                    </isComposedBy>
+                    </node>
+                <node id="030" label="Obras enciclop&eacute;dicas generales">
+                    <isComposedBy>
+                        <node id="031" label="Norteamericanas" />
+                        <node id="032" label="En ingl&eacute;s" />
+                        <node id="033" label="En otras lenguas germ&aacute;nicas" />
+                        <node id="034" label="En franc&eacute;s, provenzal, catal&aacute;n" />
+                        <node id="035" label="En italiano, rumano, retorromano" />
+                        <node id="036" label="En español, &amp; portugu&eacute;s" />
+                        <node id="037" label="En lenguas eslavas" />
+                        <node id="038" label="En lenguas escandinavas" />
+                        <node id="039" label="En otras lenguas" />
+                    </isComposedBy>
+                    </node>
+                <node id="050" label="Publicaciones en serie generales">
+                    <isComposedBy>
+                        <node id="051" label="Norteamericanas" />
+                        <node id="052" label="En ingl&eacute;s" />
+                        <node id="053" label="En otras lenguas germ&aacute;nicas" />
+                        <node id="054" label="En franc&eacute;s, provenzal, catal&aacute;n" />
+                        <node id="055" label="En italiano, rumano, retorromano" />
+                        <node id="056" label="En español &amp; portugu&eacute;s" />
+                        <node id="057" label="En lenguas eslavas" />
+                        <node id="058" label="En lenguas escandinavas" />
+                        <node id="059" label="En otras lenguas" />
+                    </isComposedBy>
+                    </node>
+                <node id="060" label="Clasificaciones generales &amp; museolog&iacute;a">
+                    <isComposedBy>
+                        <node id="061" label="En Am&eacute;rica del Norte" />
+                        <node id="062" label="En las Islas Brit&aacute;nicas. En Inglaterra" />
+                        <node id="063" label="En Europa central. En Alemania" />
+                        <node id="064" label="En Francia &amp; M&oacute;naco" />
+                        <node id="065" label="En Italia &amp; territorios adyacentes" />
+                        <node id="066" label="En la Pen&iacute;nsula Ib&eacute;rica &amp; islas adyacentes" />
+                        <node id="067" label="En Europa oriental Rusia" />
+                        <node id="068" label="En otras &aacute;reas" />
+                        <node id="069" label="Museolog&iacute;a (Ciencia de los museos)" />
+                    </isComposedBy>
+                    </node>
+                <node id="070" label="Medios noticiosos, periodismo, publicaci&oacute;n">
+                    <isComposedBy>
+                        <node id="071" label="En Am&eacute;rica del Norte" />
+                        <node id="072" label="En las Islas Brit&aacute;nicas. En Inglaterra" />
+                        <node id="073" label="En Europa central. En Alemania" />
+                        <node id="074" label="En Francia y M&oacute;naco" />
+                        <node id="075" label="En Asia y territorios adyacentes" />
+                        <node id="076" label="En la Pen&iacute;nsula Ib&eacute;rica &amp; islas adyacentes" />
+                        <node id="077" label="En Europa oriental. En Rusia" />
+                        <node id="078" label="En Escandinavia" />
+                        <node id="079" label="En otras &aacute;reas geogr&aacute;ficas" />
+                    </isComposedBy>
+                    </node>
+                <node id="080" label="Colecciones generales">
+                    <isComposedBy>
+                        <node id="081" label="Norteamericanas" />
+                        <node id="082" label="En ingl&eacute;s" />
+                        <node id="083" label="En otras lenguas germ&aacute;nicas" />
+                        <node id="084" label="En franc&eacute;s, provenzal, catal&aacute;n" />
+                        <node id="085" label="En italiano, rumano, retorromano" />
+                        <node id="086" label="En español &amp; portugu&eacute;s" />
+                        <node id="087" label="En lenguas eslavas" />
+                        <node id="088" label="En lenguas escandinavas" />
+                        <node id="089" label="En otras lenguas" />
+                    </isComposedBy>
+                    </node>
+                <node id="090" label="Manuscritos  &amp; libros raros">
+                    <isComposedBy>
+                        <node id="091" label="Manuscritos" />
+                        <node id="092" label="Libros xilogr&aacute;ficos" />
+                        <node id="093" label="Incunables" />
+                        <node id="094" label="Libros impresos" />
+                        <node id="095" label="Libros notables por su encuadernaci&oacute;n" />
+                        <node id="096" label="Libros notables por las ilustraciones" />
+                        <node id="097" label="Libros notables por su propietario u origen" />
+                        <node id="098" label="Obras prohibidas, Falsificaciones, imposturas" />
+                        <node id="099" label="Libros notables por su formato" />
+            		</isComposedBy>
+            		</node>
+            </isComposedBy>
+            </node>
+        <node id="100" label="Filosof&iacute;a &amp; psicolog&iacute;a">
+            <isComposedBy>
+                        <node id="101" label="Teor&iacute;a de la filosof&iacute;a" />
+                        <node id="102" label="Miscel&aacute;nea de filosof&iacute;a" />
+                        <node id="103" label="Diccionario de filosof&iacute;a" />
+                        <node id="105" label="Publicaciones en serie de filosof&iacute;a" />
+                        <node id="106" label="Organizaciones en filosof&iacute;a" />
+                        <node id="107" label="Educaci&oacute;n, investigaci&oacute;n en filosof&iacute;a" />
+                        <node id="108" label="Clases de personas en filosof&iacute;a" />
+                        <node id="109" label="Tratamiento hist&oacute;rico de la filosof&iacute;a" />
+                <node id="110" label="Metaf&iacute;sica">
+                    <isComposedBy>
+                        <node id="111" label="Ontolog&iacute;a" />
+                        <node id="113" label="Cosmolog&iacute;a (Filosof&iacute;a de la naturaleza)" />
+                        <node id="114" label="Espacio" />
+                        <node id="115" label="Tiempo" />
+                        <node id="116" label="Cambio" />
+                        <node id="117" label="Estructura" />
+                        <node id="118" label="Fuerza &amp; Energ&iacute;a" />
+                        <node id="119" label="N&uacute;meros &amp; cantidad" />
+                    </isComposedBy>
+                    </node>
+                <node id="120" label="Epistemolog&iacute;a, causalidad, g&eacute;nero">
+                    <isComposedBy>
+                        <node id="121" label="Epistemolog&iacute;a (Teor&iacute;a del conocimiento)" />
+                        <node id="122" label="Causalidad" />
+                        <node id="123" label="Determinismo e indeterminismo" />
+                        <node id="124" label="Teleolog&iacute;a" />
+                        <node id="126" label="El yo" />
+                        <node id="127" label="El inconsciente &amp; el subconsciente" />
+                        <node id="128" label="G&eacute;nero humano" />
+                        <node id="129" label="Origen &amp; destino del alma individual" />
+                    </isComposedBy>
+                    </node>
+                <node id="130" label="Fen&oacute;menos paranormales">
+                    <isComposedBy>
+                        <node id="131" label="M&eacute;todos ocultos para lograr bienestar" />
+                        <node id="133" label="Parapsicolog&iacute;a &amp; ocultismo" />
+                        <node id="135" label="Sueños &amp; misterios" />
+                        <node id="137" label="Grafolog&iacute;a adivinatoria" />
+                        <node id="138" label="Fisionom&iacute;a" />
+                        <node id="139" label="Frenolog&iacute;a" />
+                    </isComposedBy>
+                    </node>
+                <node id="140" label="Escuelas filos&oacute;ficas espec&iacute;ficas">
+                    <isComposedBy>
+                        <node id="141" label="Idealismo &amp; sistemas relacionados" />
+                        <node id="142" label="Filosof&iacute;a critica" />
+                        <node id="143" label="Intuicionalismo &amp; bergsonismo" />
+                        <node id="144" label="Humanismo &amp; sistemas relacionados" />
+                        <node id="145" label="Sensacionalismo" />
+                        <node id="146" label="Naturalismo &amp; sistemas relacionados" />
+                        <node id="147" label="Pante&iacute;smo &amp; sistemas relacionados" />
+                        <node id="148" label="Liberalismo, eclecticismo, tradicionalismo" />
+                        <node id="149" label="Otros sistemas filos&oacute;ficos" />
+                    </isComposedBy>
+                    </node>
+                <node id="150" label="Psicolog&iacute;a">
+                    <isComposedBy>
+                        <node id="152" label="Percepci&oacute;n, movimiento, emociones, impulsos" />
+                        <node id="153" label="Procesos mentales &amp; inteligencia" />
+                        <node id="154" label="Subconsciente &amp; estados alterados" />
+                        <node id="155" label="Psicolog&iacute;a diferencial &amp; del desarrollo" />
+                        <node id="156" label="Psicolog&iacute;a comparada" />
+                        <node id="158" label="Psicolog&iacute;a aplicada " />
+                    </isComposedBy>
+                    </node>
+                <node id="160" label="L&oacute;gica">
+                    <isComposedBy>
+                        <node id="161" label="Inducci&oacute;n" />
+                        <node id="162" label="Deducci&oacute;n" />
+                        <node id="165" label="Falacias &amp; fuentes de error" />
+                        <node id="166" label="Silogismos" />
+                        <node id="167" label="Hip&oacute;tesis" />
+                        <node id="168" label="Argumento &amp; persuasi&oacute;n" />
+                        <node id="169" label="Analog&iacute;a" />
+                    </isComposedBy>
+                    </node>
+                <node id="170" label="Ética (Filosof&iacute;a moral)">
+                    <isComposedBy>
+                        <node id="171" label="Sistemas &amp; doctrinas" />
+                        <node id="172" label="Ética pol&iacute;tica" />
+                        <node id="173" label="Ética de las relaciones familiares" />
+                        <node id="174" label="Ética econ&oacute;mica &amp; profesional" />
+                        <node id="175" label="Ética de la recreaci&oacute;n &amp; del tiempo libre" />
+                        <node id="176" label="Ética sexual &amp; de la reproducci&oacute;n" />
+                        <node id="177" label="Ética de las relaciones sociales" />
+                        <node id="178" label="Ética del consumo" />
+                        <node id="179" label="Otras normas &eacute;ticas" />
+                    </isComposedBy>
+                    </node>
+                <node id="180" label="Filosof&iacute;a antigua, medieval, oriental">
+                    <isComposedBy>
+                        <node id="181" label="Filosof&iacute;a oriental" />
+                        <node id="182" label="Filosof&iacute;as griegas, presocr&aacute;ticas" />
+                        <node id="183" label="Filosof&iacute;as sofista &amp; socr&aacute;tica" />
+                        <node id="184" label="Filosof&iacute;a plat&oacute;nica" />
+                        <node id="185" label="Filosof&iacute;a aristot&eacute;lica" />
+                        <node id="186" label="Filosof&iacute;a esc&eacute;ptica &amp; neoplat&oacute;nica" />
+                        <node id="187" label="Filosof&iacute;a epic&uacute;rea" />
+                        <node id="188" label="Filosof&iacute;a estoica" />
+                        <node id="189" label="Filosof&iacute;a medieval occidental" />
+                    </isComposedBy>
+                    </node>
+                <node id="190" label="Filosof&iacute;a moderna occidental">
+                    <isComposedBy>
+                        <node id="191" label="Estados Unidos &amp; Canad&aacute;" />
+                        <node id="192" label="Islas Brit&aacute;nicas" />
+                        <node id="193" label="Alemania &amp; Austria" />
+                        <node id="194" label="Francia" />
+                        <node id="195" label="Italia" />
+                        <node id="196" label="España &amp; Portugal" />
+                        <node id="197" label="Anterior Uni&oacute;n Sovi&eacute;tica" />
+                        <node id="198" label="Escandinavia" />
+                        <node id="199" label="Otras &aacute;reas geogr&aacute;ficas" />
+                    </isComposedBy>
+            		</node>
+            </isComposedBy>
+            </node>
+        <node id="200" label="Religi&oacute;n">
+            <isComposedBy>
+                        <node id="201" label="Filosof&iacute;a del cristianismo" />
+                        <node id="202" label="Miscel&aacute;nea del cristianismo" />
+                        <node id="203" label="Diccionarios del cristianismo" />
+                        <node id="204" label="Temas especiales" />
+                        <node id="205" label="Publicaciones en serie del cristianismo" />
+                        <node id="206" label="Organizaciones del cristianismo" />
+                        <node id="207" label="Educaci&oacute;n, investigaci&oacute;n en cristianismo" />
+                        <node id="208" label="Clases de personas en el cristianismo" />
+                        <node id="209" label="Historia &amp; geograf&iacute;a del cristianismo" />
+                <node id="210" label="Teolog&iacute;a natural">
+                    <isComposedBy>
+                        <node id="211" label="Conceptos de Dios" />
+                        <node id="212" label="Existencia, atributos de Dios" />
+                        <node id="213" label="Creaci&oacute;n" />
+                        <node id="214" label="Teodicea" />
+                        <node id="215" label="Ciencias &amp; religi&oacute;n" />
+                        <node id="216" label="El bien &amp; el mal" />
+                        <node id="218" label="El Hombre" />
+                    </isComposedBy>
+                    </node>
+                <node id="220" label="La Biblia">
+                    <isComposedBy>
+                        <node id="221" label="Antiguo Testamento" />
+                        <node id="222" label="Libros hist&oacute;ricos del Antiguo Testamento" />
+                        <node id="223" label="Libros po&eacute;ticos del Antiguo Testamento" />
+                        <node id="224" label="Libros prof&eacute;ticos del Antiguo Testamento" />
+                        <node id="225" label="Nuevo Testamento" />
+                        <node id="226" label="Evangelios &amp; Hechos de los Ap&oacute;stoles" />
+                        <node id="227" label="Ep&iacute;stolas" />
+                        <node id="228" label="Revelaci&oacute;n (Apocalipsis de Juan)" />
+                        <node id="229" label="Ap&oacute;crifos &amp; seudoep&iacute;grafes" />
+                    </isComposedBy>
+                    </node>
+                <node id="230" label="Teolog&iacute;a cristiana">
+                    <isComposedBy>
+                        <node id="231" label="Dios" />
+                        <node id="232" label="Jesucristo &amp; su familia" />
+                        <node id="233" label="El hombre" />
+                        <node id="234" label="Salvaci&oacute;n (Soteriolog&iacute;a) &amp; gracia" />
+                        <node id="235" label="Seres espirituales" />
+                        <node id="236" label="Escatolog&iacute;a" />
+                        <node id="238" label="Credos &amp; catecismos" />
+                        <node id="239" label="Apolog&eacute;tica &amp; pol&eacute;mica" />
+                    </isComposedBy>
+                    </node>
+                <node id="240" label="Moral cristiana &amp; teolog&iacute;a piadosa">
+                    <isComposedBy>
+                        <node id="241" label="Teolog&iacute;a moral" />
+                        <node id="242" label="Literatura piadosa" />
+                        <node id="243" label="Escritos evangelizadores para individuos" />
+                        <node id="245" label="Textos de himnos" />
+                        <node id="246" label="Uso del arte en el cristianismo" />
+                        <node id="247" label="Mobiliario &amp; art&iacute;culos eclesi&aacute;sticos" />
+                        <node id="248" label="Experiencia, pr&aacute;ctica, vida cristianas" />
+                        <node id="249" label="Observancias cristianas en la vida familiar" />
+                    </isComposedBy>
+                    </node>
+                <node id="250" label="Ordenes cristianas &amp; iglesia local">
+                    <isComposedBy>
+                        <node id="251" label="Predicaci&oacute;n (Homil&eacute;tica)" />
+                        <node id="252" label="Textos de sermones" />
+                        <node id="253" label="Oficio pastoral (Teolog&iacute;a pastoral)" />
+                        <node id="254" label="Gobierno &amp; administraci&oacute;n de la parroquia" />
+                        <node id="255" label="Congregaciones &amp; ord.  religiosas" />
+                        <node id="259" label="Actividades de la iglesia local" />
+                    </isComposedBy>
+                    </node>
+                <node id="260" label="Teolog&iacute;a social cristiana">
+                    <isComposedBy>
+                        <node id="261" label="Teolog&iacute;a social" />
+                        <node id="262" label="Eclesiolog&iacute;a" />
+                        <node id="263" label="Tiempos, lugares de observancia religiosa" />
+                        <node id="264" label="Culto p&uacute;blico" />
+                        <node id="265" label="Sacramentos, otros ritos &amp; actos" />
+                        <node id="266" label="Misiones" />
+                        <node id="267" label="Asociaciones para trabajo religioso" />
+                        <node id="268" label="Educaci&oacute;n religiosa" />
+                        <node id="269" label="Renovaci&oacute;n espiritual" />
+                    </isComposedBy>
+                    </node>
+                <node id="270" label="Historia de la iglesia cristiana">
+                    <isComposedBy>
+                        <node id="271" label="Ordenes religiosas en la historia de la iglesia" />
+                        <node id="272" label="Persecuciones en la historia de la iglesia" />
+                        <node id="273" label="Herej&iacute;as en la historia de la iglesia" />
+                        <node id="274" label="Iglesia cristiana en Europa" />
+                        <node id="275" label="Iglesia cristiana en Asia" />
+                        <node id="276" label="Iglesia cristiana en África" />
+                        <node id="277" label="Iglesia cristiana en Am&eacute;rica del Norte" />
+                        <node id="278" label="Iglesia cristiana en Am&eacute;rica del Sur" />
+                        <node id="279" label="Iglesia cristiana en otras &aacute;reas" />
+                    </isComposedBy>
+                    </node>
+                <node id="280" label="Denominaciones &amp; sectas cristianas">
+                    <isComposedBy>
+                        <node id="281" label="Iglesia primitiva &amp; iglesia oriental" />
+                        <node id="282" label="Iglesia Cat&oacute;lica Romana" />
+                        <node id="283" label="Iglesia anglicanas" />
+                        <node id="284" label="Protestantes de origen continental" />
+                        <node id="285" label="Iglesias Presbiterianas, reformadas, congregacionales" />
+                        <node id="286" label="Iglesias bautistas, de los Disc&iacute;pulos de Cristo, adventistas" />
+                        <node id="287" label="Iglesia Metodista &amp; relacionadas" />
+                        <node id="289" label="Otras denominaciones &amp; sectas" />
+                    </isComposedBy>
+                    </node>
+                <node id="290" label="Otras &amp; religi&oacute;n comparada">
+                    <isComposedBy>
+                        <node id="291" label="Religi&oacute;n comparada" />
+                        <node id="292" label="Religi&oacute;n cl&aacute;sica (griega &amp; romana)" />
+                        <node id="293" label="Religi&oacute;n germ&aacute;nica" />
+                        <node id="294" label="Religiones de origen hind&uacute;" />
+                        <node id="295" label="Zoroastrismo (Mazdeismo, Parsismo)" />
+                        <node id="296" label="Juda&iacute;smo" />
+                        <node id="297" label="Islamismo &amp; religiones originadas en &eacute;l" />
+                        <node id="299" label="Otras religiones" />
+                    </isComposedBy>
+            		</node>
+            </isComposedBy>
+            </node>
+        <node id="300" label="Ciencias sociales">
+            <isComposedBy>
+                        <node id="301" label="Sociolog&iacute;a &amp; antropolog&iacute;a" />
+                        <node id="302" label="Interacci&oacute;n social" />
+                        <node id="303" label="Procesos sociales" />
+                        <node id="304" label="Factores que afectan el comportamiento social" />
+                        <node id="305" label="Grupos sociales" />
+                        <node id="306" label="Cultura &amp; instituciones" />
+                        <node id="307" label="Comunidades" />
+                <node id="310" label="Estad&iacute;stica general">
+                    <isComposedBy>
+                        <node id="314" label="De Europa" />
+                        <node id="315" label="De Asia" />
+                        <node id="316" label="De África" />
+                        <node id="317" label="De Am&eacute;rica del Norte" />
+                        <node id="318" label="De Am&eacute;rica del Sur" />
+                        <node id="319" label="De otras partes del mundo" />
+                    </isComposedBy>
+                    </node>
+                <node id="320" label="Ciencia pol&iacute;tica">
+                    <isComposedBy>
+                        <node id="321" label="Sistemas de gobierno &amp; estados" />
+                        <node id="322" label="Relaciones del Estado con grupos organizados" />
+                        <node id="323" label="Derechos civiles &amp; pol&iacute;ticos" />
+                        <node id="324" label="El proceso pol&iacute;tico" />
+                        <node id="325" label="Migraci&oacute;n y colonizaci&oacute;n internacionales" />
+                        <node id="326" label="Esclavitud &amp; emancipaci&oacute;n" />
+                        <node id="327" label="Relaciones internacionales" />
+                        <node id="328" label="El proceso legislativo" />
+                    </isComposedBy>
+                    </node>
+                <node id="330" label="Econom&iacute;a">
+                    <isComposedBy>
+                        <node id="331" label="Econom&iacute;a laboral" />
+                        <node id="332" label="Econom&iacute;a financiera" />
+                        <node id="333" label="Econom&iacute;a de la tierra" />
+                        <node id="334" label="Cooperativas" />
+                        <node id="335" label="Socialismo &amp; sistemas relacionados" />
+                        <node id="336" label="Finanzas p&uacute;blicas" />
+                        <node id="337" label="Econom&iacute;a internacional" />
+                        <node id="338" label="Producci&oacute;n" />
+                        <node id="339" label="Macroeconom&iacute;a &amp; temas relacionados" />
+                    </isComposedBy>
+                    </node>
+                <node id="340" label="Derecho">
+                    <isComposedBy>
+                        <node id="341" label="Derecho internacional" />
+                        <node id="342" label="Derecho constitucional &amp; administrativo" />
+                        <node id="343" label="Derecho militar, tributario, mercantil, industrial" />
+                        <node id="344" label="Derecho social, laboral, de bienestar social &amp; relacionados" />
+                        <node id="345" label="Derecho penal" />
+                        <node id="346" label="Derecho privado" />
+                        <node id="347" label="Procedimiento &amp; tribunales civiles" />
+                        <node id="348" label="Leyes (Estatutos), reglamentaciones, jurisprudencia." />
+                        <node id="349" label="Derecho de jurisprudencia &amp; &aacute;reas especificas" />
+                    </isComposedBy>
+                    </node>
+                <node id="350" label="Administraci&oacute;n p&uacute;blica">
+                    <isComposedBy>
+                        <node id="351" label="De gobiernos centrales" />
+                        <node id="352" label="De gobiernos locales" />
+                        <node id="353" label="De gobiernos federales &amp; estatales de Estados Unidos" />
+                        <node id="354" label="De gobiernos centrales espec&iacute;ficos" />
+                        <node id="355" label="Ciencia militar" />
+                        <node id="356" label="Fuerza y guerra de infanter&iacute;a" />
+                        <node id="357" label="Fuerza &amp; guerra montada" />
+                        <node id="358" label="Otras fuerzas &amp; servicios especializados" />
+                        <node id="359" label="Fuerzas de guerra mar&iacute;timas (navales)" />
+                    </isComposedBy>
+                    </node>
+                <node id="360" label="Servicios sociales; asociaciones">
+                    <isComposedBy>
+                        <node id="361" label="Problemas sociales &amp; bienestar social en general" />
+                        <node id="362" label="Problemas &amp; servicios de bienestar social" />
+                        <node id="363" label="Otros problemas &amp; servicios sociales" />
+                        <node id="364" label="Criminolog&iacute;a" />
+                        <node id="365" label="Instituciones penales &amp; relacionadas" />
+                        <node id="366" label="Asociaciones" />
+                        <node id="367" label="Clubes de car&aacute;cter general" />
+                        <node id="368" label="Seguros" />
+                        <node id="369" label="Varias clases de asociaciones" />
+                    </isComposedBy>
+                    </node>
+                <node id="370" label="Educaci&oacute;n">
+                    <isComposedBy>
+                        <node id="371" label="Administraci&oacute;n escolar; educaci&oacute;n especial" />
+                        <node id="372" label="Educaci&oacute;n primaria" />
+                        <node id="373" label="Educaci&oacute;n secundaria " />
+                        <node id="374" label="Educaci&oacute;n de adultos" />
+                        <node id="375" label="Curr&iacute;culos" />
+                        <node id="376" label="Educaci&oacute;n de las mujeres" />
+                        <node id="377" label="Escuelas &amp; religi&oacute;n" />
+                        <node id="378" label="Educaci&oacute;n superior" />
+                        <node id="379" label="Reglamentaci&oacute;n, control, apoyo gubernamentales" />
+                    </isComposedBy>
+                    </node>
+                <node id="380" label="Comercio, comunicaciones, transporte">
+                    <isComposedBy>
+                        <node id="381" label="Comercio interno (Comercio dom&eacute;stico)" />
+                        <node id="382" label="Comercio internacional (Comercio exterior)" />
+                        <node id="383" label="Comunicaci&oacute;n postal(Correos)" />
+                        <node id="384" label="Comunicaciones, Telecomunicaciones" />
+                        <node id="385" label="Transporte ferroviario" />
+                        <node id="386" label="Transporte por v&iacute;a acu&aacute;tica interior &amp; en transbordador" />
+                        <node id="387" label="Transporte acu&aacute;tico, a&eacute;reo, espacial" />
+                        <node id="388" label="Transporte, Transporte terrestre" />
+                        <node id="389" label="Metrolog&iacute;a &amp; normalizaci&oacute;n" />
+                    </isComposedBy>
+                    </node>
+                <node id="390" label="Costumbres, etiqueta, folclor">
+                    <isComposedBy>
+                        <node id="391" label="Traje &amp; apariencia personal" />
+                        <node id="392" label="Costumbres del ciclo de vida &amp; de la vida dom&eacute;stica" />
+                        <node id="393" label="Costumbres mortuorias" />
+                        <node id="394" label="Costumbres generales" />
+                        <node id="395" label="Etiqueta (Modales)" />
+                        <node id="398" label="Folclor" />
+                        <node id="399" label="Costumbres de guerra &amp; diplomacia" />
+                    </isComposedBy>
+            		</node>
+            </isComposedBy>
+            </node>
+        <node id="400" label="Lenguas">
+            <isComposedBy>
+                        <node id="401" label="Filosof&iacute;a &amp; teor&iacute;a" />
+                        <node id="402" label="Miscel&aacute;nea" />
+                        <node id="403" label="Diccionarios &amp; enciclopedias" />
+                        <node id="404" label="Temas especiales" />
+                        <node id="405" label="Publicaciones en serie" />
+                        <node id="406" label="Organizaciones &amp; administraci&oacute;n" />
+                        <node id="407" label="Educaci&oacute;n, investigaci&oacute;n, temas relacionados" />
+                        <node id="408" label="En relaci&oacute;n con clases de personas" />
+                        <node id="409" label="Tratamiento geogr&aacute;fico &amp; de personas" />
+                <node id="410" label="Lingü&iacute;stica">
+                    <isComposedBy>
+                        <node id="411" label="Sistemas de escritura" />
+                        <node id="412" label="Etimolog&iacute;a" />
+                        <node id="413" label="Diccionarios" />
+                        <node id="414" label="Fonolog&iacute;a" />
+                        <node id="415" label="Sistemas estructurales (Gram&aacute;tica)" />
+                        <node id="417" label="Dialectolog&iacute;a &amp; lingü&iacute;stica hist&oacute;rica" />
+                        <node id="418" label="Uso est&aacute;ndar, Lingü&iacute;stica aplicada" />
+                        <node id="419" label="Lenguajes verbales no hablados ni escritos" />
+                    </isComposedBy>
+                    </node>
+                <node id="420" label="Ingles &amp; ingl&eacute;s antiguo">
+                    <isComposedBy>
+                        <node id="421" label="Sistema de escritura &amp; fonolog&iacute;a inglesa" />
+                        <node id="422" label="Etimolog&iacute;a inglesa" />
+                        <node id="423" label="Diccionarios de ingl&eacute;s" />
+                        <node id="425" label="Gram&aacute;tica inglesa" />
+                        <node id="427" label="Variaciones de le lengua inglesa" />
+                        <node id="428" label="Uso del ingl&eacute;s est&aacute;ndar" />
+                        <node id="429" label="Ingles antiguo (Anglosaj&oacute;n)" />
+                    </isComposedBy>
+                    </node>
+                <node id="430" label="Lenguas germ&aacute;nicas, Alem&aacute;n">
+                    <isComposedBy>
+                        <node id="431" label="Sistemas de escritura &amp; fonolog&iacute;a alemana" />
+                        <node id="432" label="Etimolog&iacute;a alemana " />
+                        <node id="433" label="Diccionario de Alem&aacute;n" />
+                        <node id="435" label="Gram&aacute;tica alemana" />
+                        <node id="437" label="Variaciones de la lengua alemana" />
+                        <node id="438" label="Uso del alem&aacute;n est&aacute;ndar" />
+                        <node id="439" label="Otras lenguas germ&aacute;nicas" />
+                    </isComposedBy>
+                    </node>
+                <node id="440" label="Lenguas romances, Franc&eacute;s">
+                    <isComposedBy>
+                        <node id="441" label="Sistema de escritura &amp; fonolog&iacute;a franceses" />
+                        <node id="442" label="Etimolog&iacute;a francesa" />
+                        <node id="443" label="Diccionario de franc&eacute;s" />
+                        <node id="445" label="Gram&aacute;tica francesa" />
+                        <node id="447" label="Variaciones del franc&eacute;s" />
+                        <node id="448" label="Uso del franc&eacute;s est&aacute;ndar" />
+                        <node id="449" label="Provenzal &amp; catal&aacute;n" />
+                    </isComposedBy>
+                    </node>
+                <node id="450" label="Italiano, rumano, retorromano">
+                    <isComposedBy>
+                        <node id="451" label="Sistema de escritura &amp; fonolog&iacute;a italianos" />
+                        <node id="452" label="Etimolog&iacute;a italiana" />
+                        <node id="453" label="Diccionarios de italiano" />
+                        <node id="455" label="Gram&aacute;tica italiana" />
+                        <node id="457" label="Variaciones del italiano" />
+                        <node id="458" label="Uso del italiano est&aacute;ndar" />
+                        <node id="459" label="Rumano &amp; retorromano" />
+                    </isComposedBy>
+                    </node>
+                <node id="460" label="Lenguas española &amp; portuguesa">
+                    <isComposedBy>
+                        <node id="461" label="Sistema de escritura &amp; fonolog&iacute;a" />
+                        <node id="462" label="Etimolog&iacute;a española" />
+                        <node id="463" label="Diccionarios de español" />
+                        <node id="465" label="Gram&aacute;tica española" />
+                        <node id="467" label="Variaciones del español" />
+                        <node id="468" label="Uso del español est&aacute;ndar" />
+                        <node id="469" label="Portugu&eacute;s" />
+                    </isComposedBy>
+                    </node>
+                <node id="470" label="Lenguas it&aacute;licas, Lat&iacute;n">
+                    <isComposedBy>
+                        <node id="471" label="Escritura &amp; fonolog&iacute;a latinas cl&aacute;sicas" />
+                        <node id="472" label="Etimolog&iacute;a latina cl&aacute;sica" />
+                        <node id="473" label="Diccionarios de lat&iacute;n cl&aacute;sico" />
+                        <node id="475" label="Gram&aacute;tica latina cl&aacute;sica" />
+                        <node id="477" label="Lat&iacute;n arcaico, postcl&aacute;sico, vulgar" />
+                        <node id="478" label="Uso del lat&iacute;n cl&aacute;sico" />
+                        <node id="479" label="Otras lenguas it&aacute;licas" />
+                    </isComposedBy>
+                    </node>
+                <node id="480" label="Lenguas hel&eacute;nicas, Griego cl&aacute;sico">
+                    <isComposedBy>
+                        <node id="481" label="Escritura y fonolog&iacute;a griegas cl&aacute;sicas" />
+                        <node id="482" label="Etimolog&iacute;a griega cl&aacute;sica" />
+                        <node id="483" label="Diccionarios de griego cl&aacute;sico" />
+                        <node id="485" label="Gram&aacute;tica griega cl&aacute;sica" />
+                        <node id="487" label="Griego precl&aacute;sico &amp; postclasico" />
+                        <node id="488" label="Uso del griego cl&aacute;sico" />
+                        <node id="489" label="Otras lenguas hel&eacute;nicas" />
+                    </isComposedBy>
+                    </node>
+                <node id="490" label="Otras lenguas">
+                    <isComposedBy>
+                        <node id="491" label="Lenguas indoeuropeas orientales &amp; celtas" />
+                        <node id="492" label="Lenguas afroasi&aacute;ticas, Sem&iacute;ticas" />
+                        <node id="493" label="Lenguas afroasi&aacute;ticas, no sem&iacute;ticas" />
+                        <node id="494" label="Lenguas uralaltaicas, paleosiberianas, dravidas" />
+                        <node id="495" label="Lenguas del oriente &amp; sudoriente de Asia" />
+                        <node id="496" label="Lenguas africanas" />
+                        <node id="497" label="Lenguas nativas de Am&eacute;rica del Norte" />
+                        <node id="498" label="Lenguas nativas de Am&eacute;rica del Sur" />
+                        <node id="499" label="Lenguas varias" />
+                    </isComposedBy>
+            		</node>
+            </isComposedBy>
+            </node>
+        <node id="500" label="Ciencias naturales &amp; matem&aacute;ticas">
+            <isComposedBy>
+                        <node id="501" label="Filosof&iacute;a &amp; teor&iacute;a" />
+                        <node id="502" label="Miscel&aacute;nea" />
+                        <node id="503" label="Diccionarios &amp; enciclopedias" />
+                        <node id="505" label="Probabilidades en serie" />
+                        <node id="506" label="probabilidades &amp; administraci&oacute;n" />
+                        <node id="507" label="Probabili, Probabilidades, temas relacionados" />
+                        <node id="508" label="Historia natural" />
+                        <node id="509" label="Tratamiento hist&oacute;rico, geogr&aacute;fico, de personas" />
+                <node id="510" label="Matem&aacute;ticas">
+                    <isComposedBy>
+                        <node id="511" label="Principios generales" />
+                        <node id="512" label="Álgebra &amp; teor&iacute;a de los n&uacute;meros" />
+                        <node id="513" label="Aritm&eacute;tica" />
+                        <node id="514" label="Topolog&iacute;a" />
+                        <node id="515" label="An&aacute;lisis" />
+                        <node id="516" label="Geometr&iacute;a" />
+                        <node id="519" label="Probabilidades &amp; matem&aacute;ticas aplicadas" />
+                    </isComposedBy>
+                    </node>
+                <node id="520" label="Astronom&iacute;a &amp; ciencias afines">
+                    <isComposedBy>
+                        <node id="521" label="Mec&aacute;nica celeste" />
+                        <node id="522" label="T&eacute;cnicas, equipo, materiales" />
+                        <node id="523" label="Cuerpos &amp; fen&oacute;menos celestes espec&iacute;ficos" />
+                        <node id="525" label="La Tierra (Geograf&iacute;a astron&oacute;mica)" />
+                        <node id="526" label="Geograf&iacute;a matem&aacute;tica" />
+                        <node id="527" label="Probabilid celeste" />
+                        <node id="528" label="Efem&eacute;rides" />
+                        <node id="529" label="Cronolog&iacute;a" />
+                    </isComposedBy>
+                    </node>
+                <node id="530" label="F&iacute;sica">
+                    <isComposedBy>
+                        <node id="531" label="Mec&aacute;nica cl&aacute;sica, Mec&aacute;nica de s&oacute;lidos" />
+                        <node id="532" label="Mec&aacute;nica de fluidos, Mec&aacute;nica de l&iacute;quidos" />
+                        <node id="533" label="Mec&aacute;nicas de gases" />
+                        <node id="534" label="Sonido &amp; vibraciones relacionadas" />
+                        <node id="535" label="Luz &amp; fen&oacute;menos paraf&oacute;ticos" />
+                        <node id="536" label="Calor" />
+                        <node id="537" label="Electricidad &amp; electr&oacute;nica" />
+                        <node id="538" label="Magnetismo" />
+                        <node id="539" label="F&iacute;sica moderna" />
+                    </isComposedBy>
+                    </node>
+                <node id="540" label="Qu&iacute;mica &amp; ciencias afines">
+                    <isComposedBy>
+                        <node id="541" label="Qu&iacute;mica f&iacute;sica &amp; te&oacute;rica" />
+                        <node id="542" label="T&eacute;cnicas, equipo, materiales" />
+                        <node id="543" label="Qu&iacute;mica anal&iacute;tica" />
+                        <node id="544" label="An&aacute;lisis cualitativo" />
+                        <node id="545" label="An&aacute;lisis cuantitativo" />
+                        <node id="546" label="Qu&iacute;mica inorg&aacute;nica" />
+                        <node id="547" label="Qu&iacute;mica org&aacute;nica" />
+                        <node id="548" label="Cristalograf&iacute;a" />
+                        <node id="549" label="Mineralog&iacute;a" />
+                    </isComposedBy>
+                    </node>
+                <node id="550" label="Ciencias de la tierra">
+                    <isComposedBy>
+                        <node id="551" label="Geolog&iacute;a, hidrolog&iacute;a, meteorolog&iacute;a" />
+                        <node id="552" label="Petrolog&iacute;a" />
+                        <node id="553" label="Geolog&iacute;a econ&oacute;mica" />
+                        <node id="554" label="Ciencias de la tierra de Europa" />
+                        <node id="555" label="De Asia" />
+                        <node id="556" label="De África" />
+                        <node id="557" label="De Am&eacute;rica del Norte" />
+                        <node id="558" label="De Am&eacute;rica del Sur" />
+                        <node id="559" label="De otras &aacute;reas" />
+                    </isComposedBy>
+                    </node>
+                <node id="560" label="Paleontolog&iacute;a, Paleozoolog&iacute;a">
+                    <isComposedBy>
+                        <node id="561" label="Paleobot&aacute;nica" />
+                        <node id="562" label="Invertebrados f&oacute;siles" />
+                        <node id="563" label="Filos (phyla) &amp; f&oacute;siles primitivos" />
+                        <node id="564" label="Moluscos &amp; Moluscoideos f&oacute;siles" />
+                        <node id="565" label="Otros invertebrados f&oacute;siles" />
+                        <node id="566" label="Vertebrados f&oacute;siles (Craniatos f&oacute;siles)" />
+                        <node id="567" label="Vertebrados de sangre fr&iacute;a f&oacute;siles" />
+                        <node id="568" label="Aves f&oacute;siles (P&aacute;jaros f&oacute;siles)" />
+                        <node id="569" label="Mam&iacute;feros f&oacute;siles" />
+                    </isComposedBy>
+                    </node>
+                <node id="570" label="Ciencias de la vida">
+                    <isComposedBy>
+                        <node id="572" label="Razas humanas" />
+                        <node id="573" label="Antropolog&iacute;a f&iacute;sica" />
+                        <node id="574" label="Biolog&iacute;a" />
+                        <node id="575" label="Evoluci&oacute;n &amp; gen&eacute;tica" />
+                        <node id="576" label="Microbiolog&iacute;a" />
+                        <node id="577" label="Naturaleza general de la vida" />
+                        <node id="578" label="Microscopia en biolog&iacute;a" />
+                        <node id="579" label="Colecci&oacute;n &amp; preservaci&oacute;n" />
+                    </isComposedBy>
+                    </node>
+                <node id="580" label="Ciencias bot&aacute;nicas">
+                    <isComposedBy>
+                        <node id="581" label="Bot&aacute;nica" />
+                        <node id="582" label="Espermatofitas (plantas con semilla)" />
+                        <node id="583" label="Dicotiled&oacute;neas" />
+                        <node id="584" label="Monocotiled&oacute;neas" />
+                        <node id="585" label="Gimnospermas (Pinofitas)" />
+                        <node id="586" label="Cript&oacute;gamas (Plantas sin semilla)" />
+                        <node id="587" label="Pteridofitas (Cript&oacute;gamas vasculares)" />
+                        <node id="588" label="Briofitas" />
+                        <node id="589" label="Talabiontas &amp; procariotas" />
+                    </isComposedBy>
+                    </node>
+                <node id="590" label="Ciencias zool&oacute;gicas">
+                    <isComposedBy>
+                        <node id="591" label="Zoolog&iacute;a" />
+                        <node id="592" label="Invertebrados" />
+                        <node id="593" label="Protozoos, Equinodermos, filos (phyla) relacionados" />
+                        <node id="594" label="Moluscos &amp; moluscoideos" />
+                        <node id="595" label="Otros invertebrados" />
+                        <node id="596" label="Vertebrados (Craneados, vertebrados)" />
+                        <node id="597" label="Vertebrados de sangre fr&iacute;a, Peces" />
+                        <node id="598" label="Aves (P&aacute;jaros)" />
+                        <node id="599" label="Mam&iacute;feros" />
+                    </isComposedBy>
+            		</node>
+            </isComposedBy>
+            </node>
+        <node id="600" label="Tecnolog&iacute;a (Ciencias aplicadas)">
+            <isComposedBy>
+                        <node id="601" label="Filosof&iacute;a &amp; teor&iacute;a" />
+                        <node id="602" label="Miscel&aacute;nea" />
+                        <node id="603" label="Diccionarios &amp; enciclopedias" />
+                        <node id="604" label="Temas especiales" />
+                        <node id="605" label="Publicaciones en serie" />
+                        <node id="606" label="Organizaciones" />
+                        <node id="607" label="Educaci&oacute;n, investigaci&oacute;n, temas relacionados" />
+                        <node id="608" label="Inventos &amp; patentes" />
+                        <node id="609" label="Tratamiento hist&oacute;rico, geogr&aacute;fico, de personas" />
+                <node id="610" label="Ciencias m&eacute;dicas, Medicina">
+                    <isComposedBy>
+                        <node id="611" label="Anatom&iacute;a humana, citolog&iacute;a, histolog&iacute;a" />
+                        <node id="612" label="Fisiolog&iacute;a humana" />
+                        <node id="613" label="Promoci&oacute;n de salud" />
+                        <node id="614" label="Incidencia &amp; prevenci&oacute;n de la enfermedad" />
+                        <node id="615" label="Farmacolog&iacute;a &amp; terap&eacute;utica" />
+                        <node id="616" label="Enfermedades" />
+                        <node id="617" label="Varias ramas de la medicina, Cirug&iacute;a " />
+                        <node id="618" label="Ginecolog&iacute;a &amp; otras especialidades m&eacute;dicas" />
+                        <node id="619" label="Medicina experimental" />
+                    </isComposedBy>
+                    </node>
+                <node id="620" label="Ingenier&iacute;a &amp; operaciones afines">
+                    <isComposedBy>
+                        <node id="621" label="F&iacute;sica aplicada" />
+                        <node id="622" label="Miner&iacute;a &amp; operaciones relacionadas" />
+                        <node id="623" label="Ingenier&iacute;a militar &amp; naval" />
+                        <node id="624" label="Ingenier&iacute;a civil" />
+                        <node id="625" label="Ingenier&iacute;a de ferrocarriles, de caminos" />
+                        <node id="627" label="Ingenier&iacute;a hidr&aacute;ulica" />
+                        <node id="628" label="Ingenier&iacute;a sanitaria &amp; municipal" />
+                        <node id="629" label="Otras ramas de la ingenier&iacute;a" />
+                    </isComposedBy>
+                    </node>
+                <node id="630" label="Agricultura ">
+                    <isComposedBy>
+                        <node id="631" label="T&eacute;cnicas, equipo, materiales" />
+                        <node id="632" label="Lesiones, enfermedades, plagas de las plantas" />
+                        <node id="633" label="Cultivos de campo &amp; plantaciones" />
+                        <node id="634" label="Huertos, frutas, silvicultura" />
+                        <node id="635" label="Cultivos horticolas  (Horticultura)" />
+                        <node id="636" label="Producci&oacute;n animal (Zootecnia)" />
+                        <node id="637" label="Procedimiento lechero &amp; productos relacionados" />
+                        <node id="638" label="Cultivo de insectos" />
+                        <node id="639" label="Caza, pesca, conservaci&oacute;n" />
+                    </isComposedBy>
+                    </node>
+                <node id="640" label="Econom&iacute;a dom&eacute;stica &amp; vida familiar">
+                    <isComposedBy>
+                        <node id="641" label="Alimentos &amp; bebidas" />
+                        <node id="642" label="Comidas &amp; servicio a la mesa" />
+                        <node id="643" label="Vivienda &amp; equipo de la casa" />
+                        <node id="644" label="Servicios de la casa" />
+                        <node id="645" label="Dotaci&oacute;n de la casa" />
+                        <node id="646" label="Costura, vestuario, vida personal" />
+                        <node id="647" label="Administraci&oacute;n de viviendas p&uacute;blicas" />
+                        <node id="648" label="Manejo de la casa " />
+                        <node id="649" label="Puericultura &amp; atenci&oacute;n domiciliaria del enfermo" />
+                    </isComposedBy>
+                    </node>
+                <node id="650" label="Administraci&oacute;n &amp; servicios auxiliares">
+                    <isComposedBy>
+                        <node id="651" label="Servicios de oficina" />
+                        <node id="652" label="Procesos de comunicaci&oacute;n escrita" />
+                        <node id="653" label="Taquigraf&iacute;a" />
+                        <node id="657" label="Contabilidad" />
+                        <node id="658" label="Administraci&oacute;n general" />
+                        <node id="659" label="Publicidad &amp; relaciones p&uacute;blicas" />
+                    </isComposedBy>
+                    </node>
+                <node id="660" label="Ingenier&iacute;a Qu&iacute;mica">
+                    <isComposedBy>
+                        <node id="661" label="Tecnolog&iacute;a qu&iacute;mica industrial" />
+                        <node id="662" label="Tecnolog&iacute;a  de explosivos &amp; combustibles" />
+                        <node id="663" label="Tecnolog&iacute;a de las bebidas" />
+                        <node id="664" label="Tecnolog&iacute;a de los alimentos" />
+                        <node id="665" label="Aceites industriales, grasas, ceras, gases" />
+                        <node id="666" label="Cer&aacute;mica &amp; tecnolog&iacute;as afines" />
+                        <node id="667" label="Limpieza, color, tecnolog&iacute;as relacionadas" />
+                        <node id="668" label="Tecnolog&iacute;a de otros productos org&aacute;nicos" />
+                        <node id="669" label="Metalurgia" />
+                    </isComposedBy>
+                    </node>
+                <node id="670" label="Manufactura">
+                    <isComposedBy>
+                        <node id="671" label="Metalister&iacute;a &amp; productos met&aacute;licos" />
+                        <node id="672" label="Hierro, acero, otras aleaciones ferrosas" />
+                        <node id="673" label="Metales no ferrosos" />
+                        <node id="674" label="Procesamiento de madera aserrada, productos de madera, corcho" />
+                        <node id="675" label="Procesamiento del cuero &amp; piel" />
+                        <node id="676" label="Tecnolog&iacute;a de la pulpa &amp; del papel" />
+                        <node id="677" label="Textiles" />
+                        <node id="678" label="Elast&oacute;meros &amp; productos del elast&oacute;mero" />
+                        <node id="679" label="Otros productos de materiales espec&iacute;ficos" />
+                    </isComposedBy>
+                    </node>
+                <node id="680" label="Manufactura para usos espec&iacute;ficos">
+                    <isComposedBy>
+                        <node id="681" label="Instrumentos de precisi&oacute;n &amp; otros dispositivos" />
+                        <node id="682" label="Trabajo de forja pequeña (Herrer&iacute;a)" />
+                        <node id="683" label="Ferreter&iacute;a &amp; aparatos de la casa" />
+                        <node id="684" label="Muebles &amp; talleres de hogar" />
+                        <node id="685" label="Productos de cuero, piel, relacionados " />
+                        <node id="686" label="Imprentas &amp; actividades relacionadas" />
+                        <node id="687" label="Vestuario" />
+                        <node id="688" label="Otros productos acabados, empaques" />
+                    </isComposedBy>
+                    </node>
+                <node id="690" label="Construcci&oacute;n">
+                    <isComposedBy>
+                        <node id="691" label="Materiales de construcci&oacute;n" />
+                        <node id="692" label="Pr&aacute;cticas auxiliares de la construcci&oacute;n" />
+                        <node id="693" label="Materiales &amp; prop&oacute;sitos espec&iacute;ficos" />
+                        <node id="694" label="Construcci&oacute;n en madera, Carpinter&iacute;a" />
+                        <node id="695" label="Cubiertas (techos)" />
+                        <node id="696" label="Servicios p&uacute;blicos" />
+                        <node id="697" label="Calefacci&oacute;n, ventilaci&oacute;n, aire acondicionado" />
+                        <node id="698" label="Detalles de acabado" />
+                    </isComposedBy>
+            		</node>
+            </isComposedBy>
+            </node>
+        <node id="700" label="Las artes">
+            <isComposedBy>
+                        <node id="701" label="Filosof&iacute;a &amp; teor&iacute;a" />
+                        <node id="702" label="Miscel&aacute;nea" />
+                        <node id="703" label="Diccionarios &amp; enciclopedias" />
+                        <node id="704" label="Temas especiales" />
+                        <node id="705" label="Publicaciones en serie" />
+                        <node id="706" label="Organizaciones &amp; administraci&oacute;n" />
+                        <node id="707" label="Educaci&oacute;n, investigaci&oacute;n, temas relacionados" />
+                        <node id="708" label="Galer&iacute;as, museos, colecciones privadas" />
+                        <node id="709" label="Tratamiento hist&oacute;rico, geogr&aacute;fico, personas" />
+                <node id="710" label="Urbanismo &amp; arte del paisaje">
+                    <isComposedBy>
+                        <node id="711" label="Planificaci&oacute;n del espacio (Urbanismo)" />
+                        <node id="712" label="Arquitectura del paisaje" />
+                        <node id="713" label="Arquitectura del paisaje de las v&iacute;as de tr&aacute;nsito" />
+                        <node id="714" label="Aguas ornamentales" />
+                        <node id="715" label="Plantas leñosas" />
+                        <node id="716" label="Plantas herb&aacute;ceas" />
+                        <node id="717" label="Estructuras" />
+                        <node id="718" label="Diseño de paisaje de cementerios" />
+                        <node id="719" label="Paisajes naturales" />
+                    </isComposedBy>
+                    </node>
+                <node id="720" label="Arquitectura">
+                    <isComposedBy>
+                        <node id="721" label="Estructura arquitect&oacute;nica" />
+                        <node id="722" label="Arquitectura antigua hasta ca. 300 " />
+                        <node id="723" label="Arquitectura desde ca. 300 hasta 1399" />
+                        <node id="724" label="Arquitectura desde 1400" />
+                        <node id="725" label="Estructuras p&uacute;blicas" />
+                        <node id="726" label="Edificios para prop&oacute;sitos religiosos" />
+                        <node id="727" label="Edificios para educaci&oacute;n &amp; investigaci&oacute;n" />
+                        <node id="728" label="Edificios residenciales &amp; relacionados" />
+                        <node id="729" label="Diseño &amp; decoraci&oacute;n" />
+                    </isComposedBy>
+                    </node>
+                <node id="730" label="Artes pl&aacute;sticas, Escultura">
+                    <isComposedBy>
+                        <node id="731" label="Procesos, formas, temas de la escultura" />
+                        <node id="732" label="La escultura hasta ca. 500 " />
+                        <node id="733" label="Escultura griega, etrusca, romana" />
+                        <node id="734" label="Escultura desde ca. 500  hasta 1399" />
+                        <node id="735" label="Escultura desde 1400" />
+                        <node id="736" label="Talla &amp; tallado" />
+                        <node id="737" label="Numism&aacute;tismo &amp; sigilograf&iacute;a" />
+                        <node id="738" label="Artes cer&aacute;micas" />
+                        <node id="739" label="Arte en metal" />
+                    </isComposedBy>
+                    </node>
+                <node id="740" label="Dibujo &amp; artes decorativas">
+                    <isComposedBy>
+                        <node id="741" label="Dibujo &amp; dibujos " />
+                        <node id="742" label="Perspectiva" />
+                        <node id="743" label="Dibujo &amp; dibujos por tema" />
+                        <node id="745" label="Artes decorativas" />
+                        <node id="746" label="Artes textiles" />
+                        <node id="747" label="Decoraci&oacute;n de interiores" />
+                        <node id="748" label="Vidrio" />
+                        <node id="749" label="Muebles &amp; accesorios" />
+                    </isComposedBy>
+                    </node>
+                <node id="750" label="Pintura &amp; pinturas">
+                    <isComposedBy>
+                        <node id="751" label="T&eacute;cnicas, equipo, formas" />
+                        <node id="752" label="Color" />
+                        <node id="753" label="Simbolismo, alegor&iacute;a, mitolog&iacute;a, leyenda" />
+                        <node id="754" label="Pinturas de g&eacute;nero" />
+                        <node id="755" label="Religi&oacute;n &amp; simbolismo religiosos" />
+                        <node id="757" label="Figuras humanas &amp; sus partes" />
+                        <node id="758" label="Otros temas" />
+                        <node id="759" label="Tratamiento hist&oacute;rico, geogr&aacute;fico, de personas" />
+                    </isComposedBy>
+                    </node>
+                <node id="760" label="Artes gr&aacute;ficas, Arte de grabar &amp; grabados">
+                    <isComposedBy>
+                        <node id="761" label="Procesos en relieve (Grabado en bloque)" />
+                        <node id="763" label="Procesos litogr&aacute;ficos (Planogr&aacute;ficos)" />
+                        <node id="764" label="Cromolitografia &amp; serigraf&iacute;a" />
+                        <node id="765" label="Grabado en metal" />
+                        <node id="766" label="Media tinta &amp; procesos relacionados" />
+                        <node id="767" label="Aguafuerte &amp; grabado a buril" />
+                        <node id="769" label="Grabados" />
+                    </isComposedBy>
+                    </node>
+                <node id="770" label="Fotograf&iacute;a &amp; fotograf&iacute;as">
+                    <isComposedBy>
+                        <node id="771" label="T&eacute;cnicas, equipo, materiales" />
+                        <node id="772" label="Procesos con sales met&aacute;licas" />
+                        <node id="773" label="Procesos de pigmentaci&oacute;n de la impresi&oacute;n" />
+                        <node id="774" label="Holograf&iacute;a" />
+                        <node id="778" label="Campos &amp; clases de fotograf&iacute;a" />
+                        <node id="779" label="Fotograf&iacute;a" />
+                    </isComposedBy>
+                    </node>
+                <node id="780" label="M&uacute;sica">
+                    <isComposedBy>
+                        <node id="781" label="Principios generales &amp; formas musicales" />
+                        <node id="782" label="M&uacute;sica vocal" />
+                        <node id="783" label="M&uacute;sica para voces individuales, la voz" />
+                        <node id="784" label="Instrumentos &amp; conjuntos instrumentales" />
+                        <node id="785" label="Conjuntos con un solo instrumento por parte" />
+                        <node id="786" label="Instrumentos de percusi&oacute;n &amp; otros instrumentos" />
+                        <node id="787" label="Instrumentos de cuerda (Cord&oacute;fonos)" />
+                        <node id="788" label="Instrumentos de viento (Aer&oacute;fonos)" />
+                    </isComposedBy>
+                    </node>
+                <node id="790" label="Artes recreativas &amp; de la actuaci&oacute;n">
+                    <isComposedBy>
+                        <node id="791" label="Representaciones p&uacute;blicas" />
+                        <node id="792" label="Representaciones esc&eacute;nicas" />
+                        <node id="793" label="Juegos &amp; pasatiempos bajo techo" />
+                        <node id="794" label="Juegos de destreza bajo techo" />
+                        <node id="795" label="Juegos de suerte" />
+                        <node id="796" label="Deportes &amp; juegos atl&eacute;ticos &amp; al aire libre" />
+                        <node id="797" label="Deportes acu&aacute;ticos &amp; a&eacute;reos" />
+                        <node id="798" label="Deportes ecuestres" />
+                        <node id="799" label="Pesca, caza, tiro" />
+                    </isComposedBy>
+            		</node>
+            </isComposedBy>
+            </node>
+        <node id="800" label="Literatura &amp; ret&oacute;rica">
+            <isComposedBy>
+                        <node id="801" label="Filosof&iacute;a &amp; ret&oacute;rica" />
+                        <node id="802" label="Miscel&aacute;nea" />
+                        <node id="803" label="Diccionarios &amp; enciclopedias" />
+                        <node id="805" label="Publicaciones en serie" />
+                        <node id="806" label="Organizaciones" />
+                        <node id="807" label="Educaci&oacute;n, investigaci&oacute;n, temas relacionados" />
+                        <node id="808" label="Ret&oacute;rica &amp; colecciones de literatura" />
+                        <node id="809" label="Historia &amp; critica literaria" />
+                <node id="810" label="Literatura americana en ingl&eacute;s">
+                    <isComposedBy>
+                        <node id="811" label="Poes&iacute;a" />
+                        <node id="812" label="Teatro" />
+                        <node id="813" label="Novelista" />
+                        <node id="814" label="Ensayo" />
+                        <node id="815" label="Oratoria" />
+                        <node id="816" label="Cartas" />
+                        <node id="817" label="S&aacute;tira &amp; humor" />
+                        <node id="818" label="Escritos varios" />
+                    </isComposedBy>
+                    </node>
+                <node id="820" label="Literatura inglesa &amp; inglesa antigua">
+                    <isComposedBy>
+                        <node id="821" label="Poes&iacute;a inglesa" />
+                        <node id="822" label="Teatro ingles" />
+                        <node id="823" label="Novel&iacute;stica" />
+                        <node id="824" label="Ensayos" />
+                        <node id="825" label="Oratoria" />
+                        <node id="826" label="Cartas" />
+                        <node id="827" label="S&aacute;tira &amp; humor" />
+                        <node id="828" label="Escritos varios" />
+                        <node id="829" label="Literatura inglesa antigua (anglosajona)" />
+                    </isComposedBy>
+                    </node>
+                <node id="830" label="Literatura de lenguas germ&aacute;nicas">
+                    <isComposedBy>
+                        <node id="831" label="Poes&iacute;a" />
+                        <node id="832" label="Teatro" />
+                        <node id="833" label="Ficci&oacute;n" />
+                        <node id="834" label="Ensayos" />
+                        <node id="835" label="Oratoria" />
+                        <node id="836" label="Cartas" />
+                        <node id="837" label="S&aacute;tira &amp; humor" />
+                        <node id="838" label="Escritos varios" />
+                        <node id="839" label="Otras literaturas germ&aacute;nicas" />
+                    </isComposedBy>
+                    </node>
+                <node id="840" label="Literaturas de Lenguas Romances">
+                    <isComposedBy>
+                        <node id="841" label="Poes&iacute;a francesa" />
+                        <node id="842" label="Teatro franc&eacute;s" />
+                        <node id="843" label="Novela francesa" />
+                        <node id="844" label="Ensayos franceses" />
+                        <node id="845" label="Oratoria francesa" />
+                        <node id="846" label="Cartas francesas" />
+                        <node id="847" label="S&aacute;tira &amp; humor franc&eacute;s" />
+                        <node id="848" label="Escritos varios franceses" />
+                        <node id="849" label="Provenzal &amp; catal&aacute;n" />
+                    </isComposedBy>
+                    </node>
+                <node id="850" label="Literaturas italiana, rumana, retorromana">
+                    <isComposedBy>
+                        <node id="851" label="Poes&iacute;a italiana" />
+                        <node id="852" label="Teatro italiano" />
+                        <node id="853" label="Ficci&oacute;n italiana" />
+                        <node id="854" label="Ensayos italianos" />
+                        <node id="855" label="Oratoria italiana" />
+                        <node id="856" label="Cartas italianas" />
+                        <node id="857" label="S&aacute;tiras &amp; humor italianos" />
+                        <node id="858" label="Escritos varios italianos" />
+                        <node id="859" label="Romano &amp; retorromano" />
+                    </isComposedBy>
+                    </node>
+                <node id="860" label="Literaturas española &amp; portuguesa">
+                    <isComposedBy>
+                        <node id="861" label="Poes&iacute;a española" />
+                        <node id="862" label="Teatro español" />
+                        <node id="863" label="Ficci&oacute;n española" />
+                        <node id="864" label="Ensayos españoles" />
+                        <node id="865" label="Oratoria española" />
+                        <node id="866" label="Cartas españolas" />
+                        <node id="867" label="S&aacute;tira &amp; humor españoles " />
+                        <node id="868" label="Escritos varios españoles" />
+                        <node id="869" label="Literatura portuguesa" />
+                    </isComposedBy>
+                    </node>
+                <node id="870" label="Literaturas it&aacute;licas , Literatura italiana">
+                    <isComposedBy>
+                        <node id="871" label="Poes&iacute;a latina" />
+                        <node id="872" label="Poes&iacute;a dram&aacute;tica &amp; teatro latinos" />
+                        <node id="873" label="Poes&iacute;a &eacute;pica y novel&iacute;stica latinas" />
+                        <node id="874" label="Poes&iacute;a l&iacute;rica latina" />
+                        <node id="875" label="Oratoria latina" />
+                        <node id="876" label="Cartas latinas" />
+                        <node id="877" label="S&aacute;tira &amp; humor latinos" />
+                        <node id="878" label="Escritos varios latinos" />
+                        <node id="879" label="Literaturas de otras lenguas it&aacute;licas" />
+                    </isComposedBy>
+                    </node>
+                <node id="880" label="Literaturas hel&eacute;nica, Griega cl&aacute;sica">
+                    <isComposedBy>
+                        <node id="881" label="Poes&iacute;a griega cl&aacute;sica" />
+                        <node id="882" label="Teatro griego cl&aacute;sico" />
+                        <node id="883" label="Poes&iacute;a &eacute;pica &amp; novel&iacute;stica griega cl&aacute;sica" />
+                        <node id="884" label="Poes&iacute;a l&iacute;rica griega cl&aacute;sica" />
+                        <node id="885" label="Oratoria griega cl&aacute;sica" />
+                        <node id="886" label="Cartas griegas cl&aacute;sicas" />
+                        <node id="887" label="S&aacute;tira &amp; humor griegos cl&aacute;sicos" />
+                        <node id="888" label="Escritos varios griegos cl&aacute;sicos" />
+                        <node id="889" label="Literatura griega moderna" />
+                    </isComposedBy>
+                    </node>
+                <node id="890" label="Literaturas de otras lenguas">
+                    <isComposedBy>
+                        <node id="891" label="Indoeuropeas, orientales &amp; c&eacute;lticas" />
+                        <node id="892" label="Afroasi&aacute;ticas, Sem&iacute;ticas" />
+                        <node id="893" label="Afroasi&aacute;ticas no sem&iacute;ticas" />
+                        <node id="894" label="Uralaltaicas, paleosiberianas &amp; darvinianas" />
+                        <node id="895" label="Del oriente &amp; Sudoriente de Asia" />
+                        <node id="897" label="Nativas de Am&eacute;rica del Norte" />
+                        <node id="898" label="Nativas de Am&eacute;rica del Sur" />
+                        <node id="899" label="Otras lenguas" />
+                    </isComposedBy>
+            		</node>
+            </isComposedBy>
+            </node>
+        <node id="900" label="Geograf&iacute;a e historia">
+            <isComposedBy>
+                        <node id="901" label="Filosof&iacute;a &amp; teor&iacute;a de la historia" />
+                        <node id="902" label="Miscel&aacute;nea" />
+                        <node id="903" label="Diccionarios &amp; enciclopedias" />
+                        <node id="904" label="Colecciones de relatos de eventos" />
+                        <node id="905" label="Publicaciones en serie" />
+                        <node id="906" label="Organizaciones &amp; administraci&oacute;n" />
+                        <node id="907" label="Educaci&oacute;n, investigaci&oacute;n, temas relacionados" />
+                        <node id="908" label="En relaci&oacute;n con clases de personas" />
+                        <node id="909" label="Historia universal" />
+                <node id="910" label="Geograf&iacute;a &amp; viajes">
+                    <isComposedBy>
+                        <node id="911" label="Geograf&iacute;a hist&oacute;rica" />
+                        <node id="912" label="Representaciones gr&aacute;ficas de la tierra" />
+                        <node id="913" label="Mundo antiguo" />
+                        <node id="914" label="Europa" />
+                        <node id="915" label="Asia" />
+                        <node id="916" label="África" />
+                        <node id="917" label="Am&eacute;rica del Norte" />
+                        <node id="918" label="Am&eacute;rica del Sur" />
+                        <node id="919" label="Otras &aacute;reas" />
+                    </isComposedBy>
+                    </node>
+                <node id="920" label="Biograf&iacute;a, genealog&iacute;a, emblemas">
+                    <isComposedBy>
+                        <node id="929" label="Genealog&iacute;a, nombres, emblemas" />
+                    </isComposedBy>
+                    </node>
+                <node id="930" label="Historia del mundo antiguo">
+                    <isComposedBy>
+                        <node id="931" label="China" />
+                        <node id="932" label="Egipto" />
+                        <node id="933" label="Palestina" />
+                        <node id="934" label="India" />
+                        <node id="935" label="Mesopotamia &amp; Meseta Iran&iacute;" />
+                        <node id="936" label="Europa al norte y al occidente de Italia" />
+                        <node id="937" label="Italia &amp; territorios adyacentes" />
+                        <node id="938" label="Grecia" />
+                        <node id="939" label="Otras partes del mundo antiguo" />
+                    </isComposedBy>
+                    </node>
+                <node id="940" label="Historia general de Europa">
+                    <isComposedBy>
+                        <node id="941" label="Islas Brit&aacute;nicas" />
+                        <node id="942" label="Inglaterra &amp; Gales" />
+                        <node id="943" label="Europa Central, Alemania" />
+                        <node id="944" label="Francia &amp; M&oacute;naco" />
+                        <node id="945" label="Pen&iacute;nsula It&aacute;lica e islas adyacentes" />
+                        <node id="946" label="Pen&iacute;nsula Ib&eacute;rica e islas adyacentes" />
+                        <node id="947" label="Europa Oriental, Rusia" />
+                        <node id="948" label="Europa del norte, Escandinavia" />
+                        <node id="949" label="Otras partes de Europa" />
+                    </isComposedBy>
+                    </node>
+                <node id="950" label="Historia general de Asia, Extremo Oriente">
+                    <isComposedBy>
+                        <node id="951" label="China &amp; &aacute;reas adyacentes" />
+                        <node id="952" label="Jap&oacute;n" />
+                        <node id="953" label="Pen&iacute;nsula de Arabia &amp; &aacute;reas adyacentes" />
+                        <node id="954" label="Asia de Sur, India" />
+                        <node id="955" label="Ir&aacute;n" />
+                        <node id="956" label="Medio Oriente (Cercano Oriente)" />
+                        <node id="957" label="Siberia (Rusia asi&aacute;tica)" />
+                        <node id="958" label="Asia central" />
+                        <node id="959" label="Asia sudoriental" />
+                    </isComposedBy>
+                    </node>
+                <node id="960" label="Historia general de África">
+                    <isComposedBy>
+                        <node id="961" label="T&uacute;nez &amp; Libia" />
+                        <node id="962" label="Egipto &amp; Sud&aacute;n" />
+                        <node id="963" label="Etiop&iacute;a" />
+                        <node id="964" label="Marruecos e IslasCanarias" />
+                        <node id="965" label="Argelia" />
+                        <node id="966" label="África occidental e islas cercanas" />
+                        <node id="967" label="África central e islas cercanas" />
+                        <node id="968" label="África del Sur" />
+                        <node id="969" label="Islas del Oc&eacute;ano Indico del Sur" />
+                    </isComposedBy>
+                    </node>
+                <node id="970" label="Historia General de Am&eacute;rica del Norte">
+                    <isComposedBy>
+                        <node id="971" label="Canad&aacute;" />
+                        <node id="972" label="Mesoam&eacute;rica, M&eacute;xico" />
+                        <node id="973" label="Estados Unidos" />
+                        <node id="974" label="Noroccidente de Estados Unidos" />
+                        <node id="975" label="Sudoriente de Estados Unidos" />
+                        <node id="976" label="Centro-sur de Estados Unidos" />
+                        <node id="977" label="Centro-norte de Estados Unidos" />
+                        <node id="978" label="Occidente de Estados Unidos" />
+                        <node id="979" label="Gran Cuenca &amp; Vertiente del Pac&iacute;fico" />
+                    </isComposedBy>
+                    </node>
+                <node id="980" label="Historia general de Am&eacute;rica del Sur">
+                    <isComposedBy>
+                        <node id="981" label="Brasil" />
+                        <node id="982" label="Argentina" />
+                        <node id="983" label="Chile" />
+                        <node id="984" label="Bolivia" />
+                        <node id="985" label="Per&uacute;" />
+                        <node id="986" label="Colombia &amp; Ecuador" />
+                        <node id="987" label="Venezuela" />
+                        <node id="988" label="Guayanas" />
+                        <node id="989" label="Paraguay y Uruguay" />
+                    </isComposedBy>
+                    </node>
+                <node id="990" label="Historia General de Otras &aacute;reas">
+                    <isComposedBy>
+                        <node id="993" label="Nueva Zelanda" />
+                        <node id="994" label="Australia" />
+                        <node id="995" label="Melanesia, Nueva Guinea" />
+                        <node id="996" label="Otras partes del Pac&iacute;fico, Polinesia" />
+                        <node id="997" label="Islas del Oc&eacute;ano Atl&aacute;ntico" />
+                        <node id="998" label="Islas &aacute;rticas &amp; Ant&aacute;rtida" />
+                        <node id="999" label="Mundos extraterrestres" />
+                    </isComposedBy>
+                </node>
+            </isComposedBy>
+            </node>
+    </isComposedBy>
+</node>

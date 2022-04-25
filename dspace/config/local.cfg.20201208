@@ -1,0 +1,263 @@
+# EXAMPLE "local.cfg" for DSpace.
+#
+# Any configurations added to this file will automatically OVERRIDE configurations
+# of the same name in any of the DSpace *.cfg files. This includes overriding
+# settings in any of these files:
+#    * [dspace]/config/dspace.cfg
+#    * Or any configuration file that is included in 'dspace.cfg'
+#     (See "include = [filepath]" settings near the end of dspace.cfg.
+#      By default, it includes all [dspace]/config/modules/*.cfg files)
+#
+# By default, this EXAMPLE file includes a number of commonly overridden configurations.
+# * ADD configurations by simply copying them into this file from any existing *.cfg file.
+# * REMOVE configurations by simply commenting them out or deleting them below.
+#
+# Any commented out settings in this file are simply ignored. A configuration
+# will only override another configuration if it has the EXACT SAME key/name.
+# For example, including "dspace.dir" in this local.cfg will override the
+# default value of "dspace.dir" in the dspace.cfg file.
+# Similarly, including "oai.solr.url" in this local.cfg will override the
+# default value of "oai.solr.url" in the modules/oai.cfg file.
+#
+
+
+##########################
+# SERVER CONFIGURATION   #
+##########################
+
+# DSpace installation directory.
+# This is the location where you want to install DSpace.
+# Windows note: Please remember to use forward slashes for all paths (e.g. C:/dspace)
+dspace.dir=/datos/edocur60
+
+# DSpace host name - should match base URL.  Do not include port number
+dspace.hostname = repository.urosario.edu.co
+
+# DSpace base host URL.  Include port number etc.
+dspace.baseUrl = https://repository.urosario.edu.co
+
+# The user interface you will be using for DSpace. Common usage is either xmlui or jspui
+dspace.ui = xmlui
+
+# Full link your end users will use to access DSpace. In most cases, this will be the baseurl followed by
+# the context path to the UI you are using.
+#
+# Alternatively, you can use a url redirect or deploy the web application under the servlet container root.
+# In this case, make sure to remove the /${dspace.ui} from the dspace.url property.
+dspace.url = ${dspace.baseUrl}
+
+# Name of the site
+dspace.name = Repositorio Institucional EdocUR - Universidad del Rosario
+
+# assetstore.dir, look at DSPACE/config/spring/api/bitstore.xml for more options
+# default is ${dspace.dir}/assetstore, uncomment and modify if you need to use a different path
+assetstore.dir = ${dspace.dir}/assetstore
+
+# assetstore.dir, look at DSPACE/config/spring/api/bitstore.xml for more options
+# default is ${dspace.dir}/assetstore, uncomment and modify if you need to use a different path
+#assetstore.dir = ${dspace.dir}/assetstore
+#assetstore.dir = ${dspace.dir}/assetstore
+
+# Default language for metadata values
+default.language = es
+
+# Solr server/webapp.
+# DSpace uses Solr for all search/browse capability (and for usage statistics by default).
+# The included 'solr' webapp MUST be deployed to Tomcat for DSpace to function.
+# Usually it will be available via port 8080 and the 'solr' context path. But,
+# But, you may need to modify this if you are running DSpace on a custom port, etc.
+solr.server = http://localhost/solr
+
+##########################
+# DATABASE CONFIGURATION #
+##########################
+# DSpace only supports two database types: PostgreSQL or Oracle
+
+# URL for connecting to database
+#    * Postgres template: jdbc:postgresql://localhost:5432/dspace
+#    * Oracle template: jdbc:oracle:thin:@//localhost:1521/xe
+db.url = jdbc:postgresql://localhost:5432/edocurdb60
+db2.url = jdbc:postgresql://localhost:5432/edocurdb60
+
+# JDBC Driver
+#    * For Postgres: org.postgresql.Driver
+#    * For Oracle:   oracle.jdbc.OracleDriver
+db.driver = org.postgresql.Driver
+db2.driver = org.postgresql.Driver
+
+# Database Dialect (for Hibernate)
+#    * For Postgres: org.dspace.storage.rdbms.hibernate.postgres.DSpacePostgreSQL82Dialect
+#    * For Oracle:   org.hibernate.dialect.Oracle10gDialect
+db.dialect = org.dspace.storage.rdbms.hibernate.postgres.DSpacePostgreSQL82Dialect
+
+# Database username and password
+db.username = repositoryur
+db.password = vcdbblkz9
+db2.username = repositoryur
+db2.password = vcdbblkz9
+
+# Database Schema name
+#    * For Postgres, this is often "public" (default schema)
+#    * For Oracle, schema is equivalent to the username of your database account,
+#      so this may be set to ${db.username} in most scenarios.
+db.schema = public
+
+## Connection pool parameters
+
+# Maximum number of DB connections in pool (default = 30)
+db.maxconnections = 80
+
+# Maximum time to wait before giving up if all connections in pool are busy (milliseconds)
+# (default = 5000ms or 5 seconds)
+db.maxwait = 5000
+
+# Maximum number of idle connections in pool (-1 = unlimited)
+# (default = -1, unlimited)
+db.maxidle = -1
+
+
+#######################
+# EMAIL CONFIGURATION #
+#######################
+
+# SMTP mail server (allows DSpace to send email notifications)
+mail.server = smtp.gmail.com
+#mail.server = outlook.office365.com
+
+# SMTP mail server authentication username and password (if required)
+mail.server.username = hblancoca@gmail.com
+#mail.server.username = edocur@urosario.edu.co
+mail.server.password = Paola2019$gmail
+#mail.server.password = Dcr568
+
+# SMTP mail server alternate port (defaults to 25)
+#mail.server.port = 587
+mail.server.port = 465
+
+# From address for mail
+# All mail from the DSpace site will use this 'from' address
+mail.from.address = hblancoca@gmail.com
+
+# When feedback is submitted via the Feedback form, it is sent to this address
+# Currently limited to one recipient!
+mail.feedback.recipient = ${mail.from.address}
+mail.admin = ${mail.from.address}
+mail.alert.recipient = ${mail.from.address}
+mail.registration.notify = ${mail.from.address}
+
+#mail.extraproperties = mail.smtp.starttls.enable=true
+#                        mail.smtp.socketFactory.port=587, \
+#                       mail.smtp.socketFactory.fallback=false
+
+
+########################
+# HANDLE CONFIGURATION #
+########################
+#
+# Canonical Handle URL prefix
+#
+# Items in DSpace receive a unique URL, stored in dc.identifier.uri
+# after it is generated during the submission process.
+# 
+# If you register with CNRI's handle service at http://www.handle.net/,
+# these links can be generated as permalinks using http://hdl.handle.net/
+# as canonical prefix. Please make sure to change handle.canonical.prefix
+# after registering with handle.net by uncommenting one of the following
+# lines, depending if you prefer to use http or https:
+# handle.canonical.prefix = ${dspace.url}/handle/
+# handle.canonical.prefix = http://hdl.handle.net/
+# handle.canonical.prefix = https://hdl.handle.net/
+#
+# Note that this will not alter dc.identifer.uri metadata for existing
+# items (only for subsequent submissions), but it will alter the URL
+# in JSPUI's 'identifier' message on item record pages for existing items.
+
+# CNRI Handle prefix
+# (Defaults to a dummy/fake prefix of 123456789)
+handle.prefix = 10336
+
+#######################
+# PROXY CONFIGURATION #
+#######################
+# uncomment and specify both properties if proxy server required
+# proxy server for external http requests - use regular hostname without port number
+#http.proxy.host =
+
+# port number of proxy server
+#http.proxy.port =
+
+##########################
+# AUTHENTICATION METHODS #
+##########################
+# EXAMPLE OVERRIDE:
+# Override the default authentication method(s) defined in authentication.cfg
+# by defining your own custom ordered list in this local.cfg.
+#
+# By default, all of these methods are commented out and DSpace will use the
+# settings from authentication.cfg. But you may uncomment whichever plugins you
+# need in order to change the default settings (or reorder them below).
+#
+# You may also copy default settings from the corresponding authentication-*.cfg
+# configuration file and override them in this local.cfg.
+
+# IP-based authentication/authorization. See authentication-ip.cfg for default configuration.
+#plugin.sequence.org.dspace.authenticate.AuthenticationMethod = org.dspace.authenticate.IPAuthentication
+
+# LDAP authentication/authorization. See authentication-ldap.cfg for default configuration.
+plugin.sequence.org.dspace.authenticate.AuthenticationMethod = org.dspace.authenticate.LDAPAuthentication
+
+# Shibboleth authentication/authorization. See authentication-shibboleth.cfg for default configuration.
+#plugin.sequence.org.dspace.authenticate.AuthenticationMethod = org.dspace.authenticate.ShibAuthentication
+
+# X.509 certificate authentication. See authentication-x509.cfg for default configuration.
+#plugin.sequence.org.dspace.authenticate.AuthenticationMethod = org.dspace.authenticate.X509Authentication
+
+# Authentication by Password (encrypted in DSpace's database). See authentication-password.cfg for default configuration.
+# Enabled by default in authentication.cfg
+plugin.sequence.org.dspace.authenticate.AuthenticationMethod = org.dspace.authenticate.PasswordAuthentication
+
+
+#######################
+# Flexpaper			  #
+#######################
+oo.host = 127.0.0.1
+oo.port = 8100
+
+#png2swf.exe= /usr/local/bin/png2swf
+#jpeg2swf.exe= /usr/local/bin/jpeg2swf
+#pdf2swf.exe= /usr/local/bin/pdf2swf
+#pdf2json.exe= /usr/local/bin/pdf2json
+#mudraw.exe= /usr/bin/mudraw
+png2swf.exe= /usr/bin/png2swf
+jpeg2swf.exe= /usr/bin/jpeg2swf
+pdf2swf.exe= /usr/bin/pdf2swf
+pdf2json.exe= /usr/local/bin/pdf2json
+mudraw.exe= /usr/local/bin/mudraw
+
+###### ORCID
+#---------------------------------------------------------------#
+#---------Aplicacion ORCID de delegacion de autenticacion ------#
+#---------------------------------------------------------------#
+
+#Modos posibles:
+#(por defecto)Autenticacion: El mail pide la autenticacion o creacion al usuario. Cuando se autentique o cree redirigira a nustra pagina y nos dara el token.
+#creacion: Se crea el registro. La Reclamacion redirigira a nuestras paginas y nos dara el token.
+
+orcid.mode=autenticacion
+orcid.client.id=APP-IWY0RYLKG7K310G9
+orcid.secret=7fd67400-20df-40ab-9b69-c97f4f798314
+orcid.url.redireccion=http://89.128.83.119:8080/e-ieo/orcid_access/
+orcid.url.request=https://sandbox.orcid.org
+orcid.api.url.request=https://api.sandbox.orcid.org
+orcid.mail.admin=sfernandez@arvo.es
+orcid.mail.request.dias.reintento=10
+orcid.api.version=v2.0
+orcid.api.petition=work
+
+orcid.query.autores.nuevos = select * from vc_persona where (aceptation_date is null and email is not null) and (baja is false or baja is null) and first_email_try_date is null
+orcid.query.autores.reintento = select * from vc_persona where (aceptation_date is null and email is not null) and (baja is false or baja is null) and last_email_try_date is not null and last_email_try_date + ? < now()
+orcid.query.autor.buscar = select * from vc_persona where translate(lower(nombre)\,'\u00c1\u00C9\u00cd\u00d3\u00da\u00e1\u00e9\u00ed\u00f3\u00fa\u00f1\u00fc'\,'AEIOUaeiounu') ilike '%' || translate(lower( ? )\,'\u00c1\u00C9\u00cd\u00d3\u00da\u00e1\u00e9\u00ed\u00f3\u00fa\u00f1\u00fc'\,'AEIOUaeiounu') || '%' and translate(lower(apellidos)\,'\u00c1\u00C9\u00cd\u00d3\u00da\u00e1\u00e9\u00ed\u00f3\u00fa\u00f1\u00fc'\,'AEIOUaeiounu') ilike '%' || translate(lower( ? )\,'\u00c1\u00C9\u00cd\u00d3\u00da\u00e1\u00e9\u00ed\u00f3\u00fa\u00f1\u00fc'\,'AEIOUaeiounu') || '%'
+orcid.query.autor.getById = SELECT * FROM vc_persona WHERE id=?
+
+select.idFromAuthority = select * from vc_persona where email = '?'
+

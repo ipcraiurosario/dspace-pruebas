@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<document xmlns="http://di.tamu.edu/DRI/1.0/" xmlns:i18n="http://apache.org/cocoon/i18n/2.1" version="1.1">
+<body>
+<!-- <div id="file.news.div.news" n="news" rend="primary">
+<head>DSpace Repository</head>
+<p>DSpace is a digital service that collects, preserves, and distributes digital material. Repositories are important tools for preserving an organization&apos;s legacy; they facilitate digital preservation and scholarly communication.</p>
+</div>-->
+<div id="file.news.div.news" n="news" rend="primary">
+	<head>Repositorio Institucional EdocUR</head>
+	<div id="img_collection_home">
+		<div id="home_search_box">
+			<figure source="themes/Mirage2/images/ur/edocur.png" id="img_edocur_home"> Logo Home</figure>
+			<div id="search_box">
+			<div id="aspect.discovery.SiteViewer.div.front-page-search-custom" interactive="yes" rend="primary" action="/discover" n="front-page-search" method="get">
+				<!-- <p> -->
+				<field id="aspect.discovery.SiteViewer.field.query" n="query" type="text" hint="Encierre el término entre comillas para mejorar los resultados de búsqueda" placeholder="buscadorGeneral.placeholder">
+						<params/>
+				</field>
+				<field id="aspect.discovery.SiteViewer.field.submit" n="submit" type="button"> <params/> <value type="raw">IR</value> </field>
+				<!-- </p> -->
+			</div>
+			</div>
+		</div>
+			<!--<p>DSpace is a digital service that collects, preserves, and distributes digital material. Repositories are important tools for preserving an organization&apos;s legacy; they facilitate digital preservation and scholarly communication.</p>-->
+
+<p>
+<ul class="home_icons">
+<li>
+<figure class="img_home_icons"  source="themes/Mirage2/images/ur/icon-01.png" target="handle/10336/3"> Memoria Institucional</figure>
+</li>
+<li><figure source="themes/Mirage2/images/ur/icon-02.png" target="handle/10336/4"> Sello editorial</figure> </li>
+<li><figure source="themes/Mirage2/images/ur/icon-03.png" target="handle/10336/563">Investigación</figure> </li>
+<li><figure source="themes/Mirage2/images/ur/icon-04.png" target="handle/10336/562"> Tesis y disertaciones</figure> </li>
+<li><figure source="themes/Mirage2/images/ur/icon-05.png" target="handle/10336/561"> Trabajos de grado</figure> </li>
+<li><figure source="themes/Mirage2/images/ur/icon-06.png" target="handle/10336/12945"> Recursos educativos</figure> </li>
+<li><figure source="themes/Mirage2/images/ur/colecciones-interculturales-icon.png" target="handle/10336/19066"> Colecciones interculturales</figure></li>
+<!-- <li>			<figure source="themes/Mirage2/images/ur/icon-07.png" target="handle/10336/12018"> Hospital Universitario Mayor</figure></li> -->
+<li><figure source="themes/Mirage2/images/ur/botonREA-08.png" target="handle/10336/32134">Recursos Educativos Abiertos</figure></li>
+</ul>
+</p>
+
+
+
+	</div>
+
+
+</div>
+
+
+
+</body>
+<options/>
+<meta>
+<userMeta/>
+<pageMeta/>
+<repositoryMeta/>
+</meta>
+</document>
